@@ -31,11 +31,11 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-primary/80 backdrop-blur-sm border-b' : 'bg-transparent'
+        isScrolled ? 'bg-background/80 backdrop-blur-sm border-b' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="flex items-center gap-2 font-headline text-lg font-semibold text-primary-foreground">
+        <Link href="/" className="flex items-center gap-2 font-headline text-lg font-semibold text-foreground">
           <GrafanaLogo className="h-6 w-6" />
           <span>Grafana & Friends Mumbai</span>
         </Link>
@@ -44,7 +44,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-primary-foreground/80 transition-colors hover:text-primary-foreground"
+              className="text-foreground/80 transition-colors hover:text-foreground"
             >
               {link.label}
             </Link>
@@ -58,7 +58,7 @@ export default function Header() {
             </Button>
             <Sheet>
                 <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Button variant="outline" size="icon" className="md:hidden text-foreground border-foreground/50 hover:bg-foreground/10 hover:text-foreground">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Toggle navigation menu</span>
                 </Button>
