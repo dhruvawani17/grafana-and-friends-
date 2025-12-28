@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { GrafanaLogo } from '@/components/icons/grafana-logo';
 
@@ -64,26 +64,31 @@ export default function Header() {
                 </Button>
                 </SheetTrigger>
                 <SheetContent side="right">
-                <nav className="grid gap-6 text-lg font-medium mt-8">
-                    <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
-                        <GrafanaLogo className="h-6 w-6 text-primary" />
-                        <span>G&F Mumbai</span>
-                    </Link>
-                    {navLinks.map((link) => (
-                    <Link
-                        key={link.href}
-                        href={link.href}
-                        className="text-muted-foreground transition-colors hover:text-primary"
-                    >
-                        {link.label}
-                    </Link>
-                    ))}
-                    <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4">
-                        <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
-                        Register Now
-                        </a>
-                    </Button>
-                </nav>
+                  <SheetHeader>
+                    <SheetTitle asChild>
+                      <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
+                          <GrafanaLogo className="h-6 w-6 text-primary" />
+                          <span>G&F Mumbai</span>
+                      </Link>
+                    </SheetTitle>
+                    <SheetDescription className="sr-only">Main navigation menu</SheetDescription>
+                  </SheetHeader>
+                  <nav className="grid gap-6 text-lg font-medium mt-8">
+                      {navLinks.map((link) => (
+                      <Link
+                          key={link.href}
+                          href={link.href}
+                          className="text-muted-foreground transition-colors hover:text-primary"
+                      >
+                          {link.label}
+                      </Link>
+                      ))}
+                      <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4">
+                          <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
+                          Register Now
+                          </a>
+                      </Button>
+                  </nav>
                 </SheetContent>
             </Sheet>
         </div>
