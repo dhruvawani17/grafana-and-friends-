@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A vibrant sunset over the Mumbai skyline.",
+      "imageUrl": "https://images.unsplash.com/photo-1569758267239-d08deb78bb1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxNdW1iYWklMjBza3lsaW5lfGVufDB8fHx8MTc2NjkwNDIzMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Mumbai skyline"
+    },
+    {
+      "id": "speaker-1",
+      "description": "Placeholder image for a speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "speaker-2",
+      "description": "Placeholder image for a speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "speaker-3",
+      "description": "Placeholder image for a speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "speaker-4",
+      "description": "Placeholder image for a speaker.",
+      "imageUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "sponsor-grafana",
+      "description": "Grafana Labs logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1761445777166-0d4b6f365f4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dvJTIwZ3JhZmFuYXxlbnwwfHx8fDE3NjY5MDQyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo grafana"
+    },
+    {
+      "id": "sponsor-placeholder",
+      "description": "Placeholder for a sponsor logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsb2dvJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjY4NjU0MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo technology"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Image from a past tech conference.",
+      "imageUrl": "https://images.unsplash.com/photo-1582192493926-93f4847e1323?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNoJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NjY4NTYzMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tech conference"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Audience at a tech meetup.",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwYXVkaWVuY2V8ZW58MHx8fHwxNzY2OTA0MjMyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "conference audience"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Speaker on stage at a conference.",
+      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25mZXJlbmNlJTIwc3BlYWtlcnxlbnwwfHx8fDE3NjY5MDQyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "conference speaker"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Networking at a tech event.",
+      "imageUrl": "https://images.unsplash.com/photo-1722096629468-08556d5799a0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxldmVudCUyMG5ldHdvcmtpbmd8ZW58MHx8fHwxNzY2OTA0MjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event networking"
+    },
+    {
+      "id": "gallery-5",
+      "description": "People collaborating at a workshop.",
+      "imageUrl": "https://images.unsplash.com/photo-1649252504348-235b14c9cdb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY2ODAzMzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "workshop collaboration"
+    }
+  ]
 }
