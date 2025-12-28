@@ -15,7 +15,7 @@ const coreTeam = [
 
 export default function CoreTeamSection() {
     return (
-        <section id="core-team" className="py-16 md:py-24 bg-background">
+        <section id="core-team" className="py-12 md:py-20 bg-background">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
@@ -26,33 +26,33 @@ export default function CoreTeamSection() {
                     </p>
                 </div>
 
-                <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+                <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-6">
                     {coreTeam.map((member) => {
                         const image = PlaceHolderImages.find(p => p.id === member.imageId);
                         return (
-                            <Card key={member.name} className="group overflow-hidden text-center transition-shadow hover:shadow-xl">
-                                <div className="relative">
-                                    {image && (
+                            <div key={member.name} className="group relative text-center">
+                                {image && (
+                                    <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full transition-shadow group-hover:shadow-lg">
                                         <Image
                                             src={image.imageUrl}
                                             alt={`Portrait of ${member.name}`}
-                                            width={500}
-                                            height={500}
-                                            className="aspect-square object-cover"
+                                            width={200}
+                                            height={200}
+                                            className="h-full w-full object-cover transition-transform group-hover:scale-110"
                                             data-ai-hint={image.imageHint}
                                         />
-                                    )}
-                                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">
-                                            <Linkedin className="h-10 w-10" />
-                                        </Link>
+                                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
+                                            <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">
+                                                <Linkedin className="h-8 w-8" />
+                                            </Link>
+                                        </div>
                                     </div>
-                                </div>
-                                <CardContent className="p-4">
+                                )}
+                                <div className="mt-4">
                                     <h3 className="font-headline text-lg font-semibold">{member.name}</h3>
                                     <p className="mt-1 text-xs text-primary">{member.title}</p>
-                                </CardContent>
-                            </Card>
+                                </div>
+                            </div>
                         );
                     })}
                 </div>
