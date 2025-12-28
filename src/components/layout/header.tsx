@@ -8,11 +8,13 @@ import { Menu } from 'lucide-react';
 import { GrafanaLogo } from '@/components/icons/grafana-logo';
 
 const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#speakers', label: 'Speakers' },
-  { href: '#schedule', label: 'Schedule' },
-  { href: '#sponsors', label: 'Sponsors' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '/', label: 'Home' },
+  { href: '/#about', label: 'About' },
+  { href: '/#speakers', label: 'Speakers' },
+  { href: '/#schedule', label: 'Schedule' },
+  { href: '/#sponsors', label: 'Sponsors' },
+  { href: '/badge', label: 'Badge' },
+  { href: '/#faq', label: 'FAQ' },
 ];
 
 export default function Header() {

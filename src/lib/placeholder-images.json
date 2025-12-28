@@ -71,6 +71,12 @@
       "description": "People collaborating at a workshop.",
       "imageUrl": "https://images.unsplash.com/photo-1649252504348-235b14c9cdb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b3Jrc2hvcCUyMGNvbGxhYm9yYXRpb258ZW58MHx8fHwxNzY2ODAzMzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "workshop collaboration"
+    },
+    {
+      "id": "badge-template",
+      "description": "Badge for Grafana and Friends Mumbai 2026.",
+      "imageUrl": "https://images.unsplash.com/photo-1764173038831-3ef384e6321e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxiYWRnZSUyMGNvbmZlcmVuY2V8ZW58MHx8fHwxNzY2OTA0NjE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "badge conference"
     }
   ]
 }

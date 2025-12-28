@@ -7,6 +7,7 @@ import ScheduleSection from '@/components/sections/schedule';
 import SponsorsSection from '@/components/sections/sponsors';
 import GallerySection from '@/components/sections/gallery';
 import FaqSection from '@/components/sections/faq';
+import CoreTeamSection from '@/components/sections/core-team';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SpeakersSection />
+        <CoreTeamSection />
         <ScheduleSection />
         <SponsorsSection />
         <GallerySection />
