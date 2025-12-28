@@ -9,6 +9,8 @@ const coreTeam = [
     { name: 'Jane Smith', title: 'Community Manager', imageId: 'speaker-2', linkedin: '#' },
     { name: 'Peter Jones', title: 'Sponsorship Lead', imageId: 'speaker-3', linkedin: '#' },
     { name: 'Mary Johnson', title: 'Volunteer Coordinator', imageId: 'speaker-4', linkedin: '#' },
+    { name: 'Sam Wilson', title: 'AV Lead', imageId: 'speaker-5', linkedin: '#' },
+    { name: 'Casey Becker', title: 'Social Media Lead', imageId: 'speaker-6', linkedin: '#' },
 ];
 
 export default function CoreTeamSection() {
@@ -24,7 +26,7 @@ export default function CoreTeamSection() {
                     </p>
                 </div>
 
-                <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
                     {coreTeam.map((member) => {
                         const image = PlaceHolderImages.find(p => p.id === member.imageId);
                         return (
@@ -46,9 +48,9 @@ export default function CoreTeamSection() {
                                         </Link>
                                     </div>
                                 </div>
-                                <CardContent className="p-6">
-                                    <h3 className="font-headline text-xl font-semibold">{member.name}</h3>
-                                    <p className="mt-1 text-sm text-primary">{member.title}</p>
+                                <CardContent className="p-4">
+                                    <h3 className="font-headline text-lg font-semibold">{member.name}</h3>
+                                    <p className="mt-1 text-xs text-primary">{member.title}</p>
                                 </CardContent>
                             </Card>
                         );
