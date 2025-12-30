@@ -24,10 +24,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-6 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Grafana and Friends Mumbai. All rights reserved.</p>
-          <p className="mt-1">
-            Designed by an AI assistant.
-          </p>
+          <p>Email: grafanamumbai@gmail.com</p>
+          <p className="mt-1">© 2026 Copyright: Grafana & Friends - Mumbai</p>
+          <p className="mt-1">Made with ♥ by Grafana & Friends Mumbai</p>
         </div>
       </div>
     </footer>
