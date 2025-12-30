@@ -117,6 +117,15 @@ export default function BadgePage() {
     drawBadge(true);
   }
 
+  const renderSocialText = () => {
+    return socialText.split(' ').map((word, index) => {
+        if (word.startsWith('#')) {
+            return <span key={index} className="text-primary">{word} </span>;
+        }
+        return `${word} `;
+    });
+  };
+
 
   return (
     <>
@@ -136,7 +145,9 @@ export default function BadgePage() {
 
           <section className="mt-12">
             <h2 className="font-headline text-2xl font-semibold">Share on Social Media</h2>
-            <Textarea readOnly value={socialText} className="mt-4 h-32 text-base" />
+            <div className="mt-4 rounded-lg border border-dashed border-primary/50 bg-muted/50 p-6">
+                <p className="text-base text-muted-foreground">{renderSocialText()}</p>
+            </div>
             <Button onClick={handleCopyToClipboard} className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground">
               <Copy className="mr-2 h-4 w-4" /> Copy to Clipboard
             </Button>
