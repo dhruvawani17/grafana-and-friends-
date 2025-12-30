@@ -12,7 +12,7 @@ const faqs = [
         answer: (
             <>
                 The official community group of Grafana and observability enthusiasts, including engineers, SREs, DevOps practitioners, architects, and students in and around Mumbai, India.
-                Join us on <Link href="#" className="text-primary underline hover:no-underline">Meetup</Link>.
+                Join us on <Link href="https://www.meetup.com/grafana-and-friends-mumbai/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">Meetup</Link>.
             </>
         )
     },
