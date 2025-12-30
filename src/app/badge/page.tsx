@@ -55,74 +55,74 @@ export default function BadgePage() {
     badgeImage.src = badgeTemplate.imageUrl;
 
     badgeImage.onload = () => {
-        // Set canvas to image dimensions
-        canvas.width = badgeImage.width;
-        canvas.height = badgeImage.height;
+      // Set canvas to image dimensions
+      canvas.width = badgeImage.width;
+      canvas.height = badgeImage.height;
 
-        // Draw the badge template
-        ctx.drawImage(badgeImage, 0, 0, canvas.width, canvas.height);
+      // Draw the badge template
+      ctx.drawImage(badgeImage, 0, 0, canvas.width, canvas.height);
 
-        if (photoUrl) {
-            const user_image = new (window as any).Image();
-            user_image.crossOrigin = 'anonymous';
-            user_image.src = photoUrl;
-            user_image.onload = () => {
-                // You might need to adjust these values based on your new badge template
-                const size = 250; 
-                const x = (canvas.width / 2) - (size / 2);
-                const y = (canvas.height / 2) - (size / 2) - 50; 
+      if (photoUrl) {
+        const user_image = new (window as any).Image();
+        user_image.crossOrigin = 'anonymous';
+        user_image.src = photoUrl;
+        user_image.onload = () => {
+          // You might need to adjust these values based on your new badge template
+          const size = 250;
+          const x = (canvas.width / 2) - (size / 2);
+          const y = (canvas.height / 2) - (size / 2) - 50;
 
-                ctx.save();
-                ctx.beginPath();
-                ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
-                ctx.closePath();
-                ctx.clip();
-                
-                ctx.drawImage(user_image, x, y, size, size);
-                
-                ctx.beginPath();
-                ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
-                ctx.strokeStyle = '#FFC107'; // Example color
-                ctx.lineWidth = 10;
-                ctx.stroke();
-                ctx.restore();
+          ctx.save();
+          ctx.beginPath();
+          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+          ctx.closePath();
+          ctx.clip();
 
-                if (download) {
-                    downloadCanvasAsImage();
-                }
-            };
-        } else {
-             if (download) {
-                downloadCanvasAsImage();
-            }
+          ctx.drawImage(user_image, x, y, size, size);
+
+          ctx.beginPath();
+          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+          ctx.strokeStyle = '#FFC107'; // Example color
+          ctx.lineWidth = 10;
+          ctx.stroke();
+          ctx.restore();
+
+          if (download) {
+            downloadCanvasAsImage();
+          }
+        };
+      } else {
+        if (download) {
+          downloadCanvasAsImage();
         }
+      }
     };
   };
 
   const downloadCanvasAsImage = () => {
     const canvas = canvasRef.current;
-     if(canvas){
-        const link = document.createElement('a');
-        link.download = 'gafm-badge.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-     }
+    if (canvas) {
+      const link = document.createElement('a');
+      link.download = 'gafm-badge.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    }
   };
-  
+
   const handleDownload = () => {
-      drawBadge(true, userImage || undefined);
+    drawBadge(true, userImage || undefined);
   };
-  
+
   const handleDownloadWithoutPhoto = () => {
     drawBadge(true);
   }
 
   const renderSocialText = () => {
     return socialText.split(' ').map((word, index) => {
-        if (word.startsWith('#')) {
-            return <span key={index} className="text-primary">{word} </span>;
-        }
-        return `${word} `;
+      if (word.startsWith('#')) {
+        return <span key={index} className="text-primary">{word} </span>;
+      }
+      return `${word} `;
     });
   };
 
@@ -133,10 +133,10 @@ export default function BadgePage() {
       <main className="container mx-auto px-4 py-12 md:px-6">
         <div className="mx-auto max-w-4xl">
           <h1 className="mb-2 text-center font-headline text-4xl font-bold tracking-tight sm:text-5xl text-primary"
-             style={{
-                background: 'linear-gradient(90deg, #F9A825, #FF5722)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
+            style={{
+              background: 'linear-gradient(90deg, #F9A825, #FF5722)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
             }}
           >
             DOWNLOAD YOUR BADGE
@@ -146,7 +146,7 @@ export default function BadgePage() {
           <section className="mt-12">
             <h2 className="font-headline text-2xl font-semibold">Share on Social Media</h2>
             <div className="mt-4 rounded-lg border border-dashed border-primary/50 bg-muted/50 p-6">
-                <p className="text-base text-muted-foreground">{renderSocialText()}</p>
+              <p className="text-base text-muted-foreground">{renderSocialText()}</p>
             </div>
             <Button onClick={handleCopyToClipboard} className="mt-4 bg-accent hover:bg-accent/90 text-accent-foreground">
               <Copy className="mr-2 h-4 w-4" /> Copy to Clipboard
@@ -160,36 +160,36 @@ export default function BadgePage() {
                 <CardContent className="p-6">
                   <div className="relative flex justify-center items-center bg-muted rounded-md aspect-video">
                     {/* Canvas for drawing is hidden but used for download */}
-                    <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{display: 'none'}} />
-                    
+                    <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ display: 'none' }} />
+
                     {/* This is the preview area */}
                     <div className="relative w-full aspect-video">
-                        {badgeTemplate && 
-                            <Image
-                                src={badgeTemplate.imageUrl}
-                                alt="Badge preview background"
-                                fill
-                                style={{objectFit: 'contain'}}
-                                data-ai-hint={badgeTemplate.imageHint}
-                            />
-                        }
-                        {userImage && (
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <Image
-                                    src={userImage}
-                                    alt="Your photo"
-                                    width={150}
-                                    height={150}
-                                    className="rounded-full object-cover border-4 border-amber-400"
-                                />
-                            </div>
-                        )}
-                         {!userImage && (
-                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 rounded-md">
-                                <Upload className="h-10 w-10 text-white" />
-                                <p className="text-white mt-2">Upload a photo</p>
-                            </div>
-                        )}
+                      {badgeTemplate &&
+                        <Image
+                          src={badgeTemplate.imageUrl}
+                          alt="Badge preview background"
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          data-ai-hint={badgeTemplate.imageHint}
+                        />
+                      }
+                      {userImage && (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <Image
+                            src={userImage}
+                            alt="Your photo"
+                            width={150}
+                            height={150}
+                            className="rounded-full object-cover border-4 border-amber-400"
+                          />
+                        </div>
+                      )}
+                      {!userImage && (
+                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 rounded-md">
+                          <Upload className="h-10 w-10 text-white" />
+                          <p className="text-white mt-2">Upload a photo</p>
+                        </div>
+                      )}
                     </div>
 
                   </div>
@@ -212,18 +212,16 @@ export default function BadgePage() {
             <section>
               <h2 className="font-headline text-2xl font-semibold">Without your Photo</h2>
               <Card className="mt-4">
-                  <CardContent className="p-6">
-                  {badgeTemplate && (
-                    <Image
-                      src={badgeTemplate.imageUrl}
-                      alt="Badge template"
-                      width={1200}
-                      height={630}
-                      className="rounded-md w-full h-auto"
-                      data-ai-hint={badgeTemplate.imageHint}
-                      priority
-                    />
-                  )}
+                <CardContent className="p-6">
+                  <Image
+                    src="/badge/withoutphoto.png"
+                    alt="Badge template"
+                    width={1200}
+                    height={630}
+                    className="rounded-md w-full h-auto"
+                    data-ai-hint="badge conference"
+                    priority
+                  />
                   <Button onClick={handleDownloadWithoutPhoto} className="mt-4 w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                     <Download className="mr-2 h-4 w-4" /> Download Badge
                   </Button>
@@ -242,9 +240,9 @@ export default function BadgePage() {
 
           <section className="mt-16">
             <h2 className="text-center font-headline text-2xl font-semibold">Community on Twitter/X</h2>
-             <div className="mt-6 mx-auto max-w-xl">
-                <TwitterTimeline />
-             </div>
+            <div className="mt-6 mx-auto max-w-xl">
+              <TwitterTimeline />
+            </div>
           </section>
 
         </div>
