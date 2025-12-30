@@ -26,7 +26,7 @@ const navLinks = [
 export default function Header() {
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b bg-primary/80 backdrop-blur-sm"
+      className="sticky top-0 z-50 w-full border-b bg-primary"
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-headline text-lg font-semibold text-primary-foreground">
@@ -53,7 +53,7 @@ export default function Header() {
             <Sheet>
                 <SheetTrigger asChild>
                 <Button variant="outline" size="icon" className="md:hidden text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-                    <Menu className="h-6 w-6" />
+                    <Menu className="h-6 w-6 text-accent hover:text-accent-foreground" />
                     <span className="sr-only">Toggle navigation menu</span>
                 </Button>
                 </SheetTrigger>
