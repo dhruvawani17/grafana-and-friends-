@@ -18,8 +18,8 @@ export default function AboutSection() {
                     <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
                         About Us
                     </h2>
-                    <p className="mt-4 text-lg text-muted-foreground">
-                        Grafana & Friends Mumbai is a community-driven event for developers, SREs, and DevOps engineers passionate about observability. Join us for a full day of talks, workshops, and networking.
+                     <p className="mt-4 text-lg text-muted-foreground">
+                        Grafana & Friends Mumbai is a local open-source community for Grafana enthusiasts, powered by Grafana Labs, where members can learn about the latest updates and news on Grafana, learn from experts, share tips and tricks, and tackle real-world challenges. We welcome community members to demonstrate their use cases, talk about their observability journey, or showcase tools and dashboards they have built.
                     </p>
                 </div>
 
