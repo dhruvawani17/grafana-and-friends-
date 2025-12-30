@@ -113,6 +113,12 @@
       "description": "Badge for Grafana and Friends Mumbai 2026.",
       "imageUrl": "https://storage.googleapis.com/aip-dev-images-us-central1/public/user/clxdjy2k20002167v266n9a3q/5b94f057-a36a-4cd4-8840-a33758b97d19.jpeg",
       "imageHint": "badge conference"
+    },
+    {
+      "id": "badge-no-photo",
+      "description": "Badge for Grafana and Friends Mumbai 2026 without a photo.",
+      "imageUrl": "https://storage.googleapis.com/aip-dev-images-us-central1/public/user/clxdjy2k20002167v266n9a3q/b322a36b-7351-4043-8551-7cc40c2a8c3d.png",
+      "imageHint": "badge conference"
     }
   ]
 }

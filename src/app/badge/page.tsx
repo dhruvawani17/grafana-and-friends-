@@ -3,7 +3,6 @@ import { useRef, useState, useEffect } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Copy, Download, Upload } from 'lucide-react';
@@ -16,6 +15,7 @@ export default function BadgePage() {
   const { toast } = useToast();
   const socialText = "I am attending Grafana and Friends Mumbai 2026. #gafm26 #grafanafriendsmumbai #observability #mumbai #grafana";
   const badgeTemplate = PlaceHolderImages.find(p => p.id === 'badge-template');
+  const badgeNoPhoto = PlaceHolderImages.find(p => p.id === 'badge-no-photo');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [userImage, setUserImage] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -52,7 +52,7 @@ export default function BadgePage() {
 
     const badgeImage = new (window as any).Image();
     badgeImage.crossOrigin = 'anonymous';
-    badgeImage.src = badgeTemplate.imageUrl;
+    badgeImage.src = photoUrl ? badgeTemplate.imageUrl : (badgeNoPhoto?.imageUrl || '');
 
     badgeImage.onload = () => {
       // Set canvas to image dimensions
@@ -213,15 +213,17 @@ export default function BadgePage() {
               <h2 className="font-headline text-2xl font-semibold">Without your Photo</h2>
               <Card className="mt-4">
                 <CardContent className="p-6">
-                  <Image
-                    src="/badge/withoutphoto.png"
-                    alt="Badge template"
-                    width={1200}
-                    height={630}
-                    className="rounded-md w-full h-auto"
-                    data-ai-hint="badge conference"
-                    priority
-                  />
+                  {badgeNoPhoto && (
+                    <Image
+                      src={badgeNoPhoto.imageUrl}
+                      alt="Badge template"
+                      width={1200}
+                      height={630}
+                      className="rounded-md w-full h-auto"
+                      data-ai-hint={badgeNoPhoto.imageHint}
+                      priority
+                    />
+                  )}
                   <Button onClick={handleDownloadWithoutPhoto} className="mt-4 w-full bg-accent hover:bg-accent/90 text-accent-foreground">
                     <Download className="mr-2 h-4 w-4" /> Download Badge
                   </Button>
