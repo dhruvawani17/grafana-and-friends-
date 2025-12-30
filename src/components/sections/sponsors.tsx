@@ -1,15 +1,32 @@
+'use client';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import React from 'react';
 
 const swags = [
     { name: 'Cool T-Shirt', imageId: 'swag-1' },
     { name: 'Stickers Pack', imageId: 'swag-2' },
     { name: 'Laptop Sleeve', imageId: 'swag-3' },
     { name: 'Coffee Mug', imageId: 'swag-4' },
+    { name: 'Event Hoodie', imageId: 'swag-hoodie' },
+    { name: 'Branded Diary', imageId: 'swag-diary' },
+    { name: 'Pen Set', imageId: 'swag-pen-set' },
 ]
 
 export default function SponsorsSection() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 2000, stopOnInteraction: true })
+    );
+
     return (
         <section id="sponsors" className="py-16 md:py-24 bg-secondary">
             <div className="container mx-auto px-4 md:px-6">
@@ -22,31 +39,49 @@ export default function SponsorsSection() {
                     </p>
                 </div>
                 
-                <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
-                    {swags.map((swag) => {
-                        const image = PlaceHolderImages.find(p => p.id === swag.imageId);
-                        return (
-                            <Card key={swag.name} className="overflow-hidden text-center transition-transform hover:scale-105 hover:shadow-xl">
-                                <CardContent className="flex aspect-square items-center justify-center p-0">
-                                {image && (
-                                    <Image 
-                                        src={image.imageUrl}
-                                        alt={swag.name}
-                                        width={400}
-                                        height={400}
-                                        className="h-full w-full object-cover"
-                                        data-ai-hint={image.imageHint}
-                                    />
-                                )}
-                                </CardContent>
-                                <div className="p-4 bg-background">
-                                    <h3 className="font-headline text-lg font-semibold">{swag.name}</h3>
-                                </div>
-                            </Card>
-                        )
-                    })}
+                <div className="mt-16">
+                    <Carousel
+                        plugins={[plugin.current]}
+                        opts={{
+                            align: "start",
+                            loop: true,
+                        }}
+                        className="w-full max-w-4xl mx-auto"
+                        onMouseEnter={plugin.current.stop}
+                        onMouseLeave={plugin.current.reset}
+                    >
+                        <CarouselContent>
+                            {swags.map((swag) => {
+                                const image = PlaceHolderImages.find(p => p.id === swag.imageId);
+                                return (
+                                    <CarouselItem key={swag.name} className="md:basis-1/2 lg:basis-1/3">
+                                        <div className="p-4">
+                                            <Card className="overflow-hidden text-center transition-transform hover:scale-105 hover:shadow-xl">
+                                                <CardContent className="flex aspect-square items-center justify-center p-0">
+                                                {image && (
+                                                    <Image 
+                                                        src={image.imageUrl}
+                                                        alt={swag.name}
+                                                        width={400}
+                                                        height={400}
+                                                        className="h-full w-full object-cover"
+                                                        data-ai-hint={image.imageHint}
+                                                    />
+                                                )}
+                                                </CardContent>
+                                                <div className="p-4 bg-background">
+                                                    <h3 className="font-headline text-lg font-semibold">{swag.name}</h3>
+                                                </div>
+                                            </Card>
+                                        </div>
+                                    </CarouselItem>
+                                )
+                            })}
+                        </CarouselContent>
+                        <CarouselPrevious className="hidden sm:flex" />
+                        <CarouselNext className="hidden sm:flex" />
+                    </Carousel>
                 </div>
-
             </div>
         </section>
     );

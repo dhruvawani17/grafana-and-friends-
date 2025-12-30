@@ -67,6 +67,24 @@
       "imageHint": "coffee mug"
     },
     {
+      "id": "swag-hoodie",
+      "description": "Event hoodie with logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1760641372264-24a0a21b28c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxldmVudCUyMGhvb2RpZXxlbnwwfHx8fDE3NjcwNjUyMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event hoodie"
+    },
+    {
+      "id": "swag-diary",
+      "description": "Branded diary.",
+      "imageUrl": "https://images.unsplash.com/photo-1611571741792-edb58d0ceb67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnJhbmRlZCUyMGRpYXJ5fGVufDB8fHx8MTc2NzA2NTIzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "branded diary"
+    },
+    {
+      "id": "swag-pen-set",
+      "description": "A set of pens.",
+      "imageUrl": "https://images.unsplash.com/photo-1662559445362-56cd94023590?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZW4lMjBzZXR8ZW58MHx8fHwxNzY3MDY1MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pen set"
+    },
+    {
       "id": "gallery-1",
       "description": "Image from a past tech conference.",
       "imageUrl": "https://images.unsplash.com/photo-1582192493926-93f4847e1323?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNoJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NjY4NTYzMTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
