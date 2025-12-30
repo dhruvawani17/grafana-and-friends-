@@ -55,12 +55,6 @@
       "imageHint": "laptop stickers"
     },
     {
-      "id": "swag-3",
-      "description": "Branded laptop sleeve.",
-      "imageUrl": "https://images.unsplash.com/photo-1763034179057-acad3a072568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYXB0b3AlMjBzbGVldmV8ZW58MHx8fHwxNzY3MDY1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "laptop sleeve"
-    },
-    {
       "id": "swag-4",
       "description": "Coffee mug with logo.",
       "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1241634/xlarge_Riviera_Mug.jpg",
@@ -73,10 +67,10 @@
       "imageHint": "event hoodie"
     },
     {
-      "id": "swag-diary",
-      "description": "Branded diary.",
-      "imageUrl": "https://images.unsplash.com/photo-1611571741792-edb58d0ceb67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YnJhbmRlZCUyMGRpYXJ5fGVufDB8fHx8MTc2NzA2NTIzNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "branded diary"
+      "id": "swag-grot-plushie",
+      "description": "Grot Plush Toy",
+      "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1257999/xlarge_Baby%20Grot%20Plushie.jpg",
+      "imageHint": "plush toy"
     },
     {
       "id": "swag-pen-set",

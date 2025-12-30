@@ -15,10 +15,9 @@ import React from 'react';
 const swags = [
     { name: 'Cool T-Shirt', imageId: 'swag-1' },
     { name: 'Stickers Pack', imageId: 'swag-2' },
-    { name: 'Laptop Sleeve', imageId: 'swag-3' },
+    { name: 'Grot Plush Toy', imageId: 'swag-grot-plushie' },
     { name: 'Coffee Mug', imageId: 'swag-4' },
     { name: 'Event Hoodie', imageId: 'swag-hoodie' },
-    { name: 'Branded Diary', imageId: 'swag-diary' },
     { name: 'Pen Set', imageId: 'swag-pen-set' },
 ]
 
