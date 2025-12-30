@@ -4,31 +4,49 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 
 const faqs = [
     {
-        question: "What is Grafana and Friends Mumbai?",
-        answer: "It's a community-led meetup for anyone interested in observability, monitoring, and data visualization. We focus on tools like Grafana, Prometheus, Loki, and the broader open-source observability ecosystem."
+        question: "What is Grafana & Friends Mumbai, how can I join?",
+        answer: (
+            <>
+                The official community group of Grafana and observability enthusiasts, including engineers, SREs, DevOps practitioners, architects, and students in and around Mumbai, India.
+                Join us on <Link href="#" className="text-primary underline hover:no-underline">Meetup</Link>.
+            </>
+        )
     },
     {
-        question: "Who should attend?",
-        answer: "Developers, DevOps engineers, SREs, system administrators, students, and anyone passionate about technology and observability. All skill levels are welcome!"
+        question: "Why should you join us?",
+        answer: "This is a platform where you can interact with highly qualified and experienced industry professionals and like-minded people. Here, you get plenty of opportunities to learn, grow, and share with others. You will get access to various open-source, DevOps, cloud-native, and SDE topics, including integrations of the LGTM stack and much more. This also gives you a great chance to win goodies and swag, learn from our collaborations, and participate in meetups with different themes."
     },
     {
-        question: "Is the event free?",
-        answer: "Yes! Thanks to our amazing sponsors, the event is completely free to attend. However, registration is mandatory."
+        question: "What if I have more questions?",
+        answer: "Write us all your queries at grafanamumbai@gmail.com, we will reach out to you ASAP, or drop a message on our social pages, we are active there."
     },
     {
-        question: "Will there be food and drinks?",
-        answer: "Absolutely. We'll have breakfast, lunch, and coffee/tea throughout the day to keep you energized."
+        question: "What is the Code of Conduct for the Event?",
+        answer: (
+            <>
+                You can find the Code of Conduct <Link href="https://grafana.com/events/events-code-of-conduct/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:no-underline">here</Link>.
+            </>
+        )
     },
     {
-        question: "Is there a Code of Conduct?",
-        answer: "Yes. We are committed to providing a friendly, safe, and welcoming environment for all. All attendees, speakers, sponsors, and volunteers are required to agree with and adhere to our Code of Conduct."
+        question: "What are the perks available for the participants?",
+        answer: "Interact with highly qualified and experienced industry professionals and like-minded people, and have a chance to win goodies and swags, during the meetup via contests or quizzes."
     },
     {
-        question: "How can I become a speaker or a sponsor?",
-        answer: "We have a Call for Proposals (CFP) link in the Speakers section. For sponsorship inquiries, please reach out to the event organizers through our social media channels."
+        question: "By who and to whom?",
+        answer: (
+            <ul className="list-disc pl-5 space-y-2">
+                <li>Grafana & Friends Mumbai is organized by the local Grafana community, powered by Grafana Labs.</li>
+                <li>It brings together engineers, SREs, DevOps practitioners, students, and open-source enthusiasts.</li>
+                <li>The meetups focus on Grafana’s observability stack and related open-source tools.</li>
+                <li>Sessions include real-world use cases, community demos, expert talks, and hands-on discussions.</li>
+                <li>Community members can share their work, gain visibility, and become part of the community spotlight.</li>
+            </ul>
+        )
     }
 ];
 
