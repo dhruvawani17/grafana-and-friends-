@@ -1,3 +1,5 @@
+import { Clock } from 'lucide-react';
+
 const schedule = [
   { time: '10:00 AM', title: 'Registration & Breakfast', description: 'Doors open. Grab your badge, some coffee, and meet fellow attendees.' },
   { time: '10:30 AM', title: 'Opening Keynote', description: 'Welcome to Grafana & Friends Mumbai!'},
@@ -19,44 +21,42 @@ export default function ScheduleSection() {
                     <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
                         Event Schedule
                     </h2>
+                    <div className="mx-auto mt-4 h-1 w-24 bg-primary"></div>
                     <p className="mt-4 text-lg text-muted-foreground">
                         A day packed with learning and fun. The schedule is tentative and subject to change.
                     </p>
                 </div>
 
-                <div className="mt-16 max-w-3xl mx-auto">
-                    <div className="flow-root">
-                        <ul className="-mb-8">
-                            {schedule.map((item, itemIdx) => (
-                                <li key={item.time}>
-                                    <div className="relative pb-8">
-                                        {itemIdx !== schedule.length - 1 ? (
-                                            <span className="absolute left-5 top-5 -ml-px h-full w-0.5 bg-border" aria-hidden="true" />
-                                        ) : null}
-                                        <div className="relative flex items-start space-x-6">
-                                            <div>
-                                                <div className="relative px-1">
-                                                    <div className="h-10 w-10 bg-primary rounded-full ring-8 ring-background flex items-center justify-center">
-                                                        <span className="text-sm font-bold text-primary-foreground">
-                                                            {item.time.split(' ')[0].slice(0, -3)}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="min-w-0 flex-1 py-1.5">
-                                                <div className="text-sm leading-6">
-                                                    <p className="text-sm text-muted-foreground">{item.time}</p>
-                                                    <p className="font-headline text-lg font-semibold text-foreground">
-                                                        {item.title}
-                                                    </p>
-                                                    <p className="mt-1 text-base text-muted-foreground">{item.description}</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                <div className="mt-16 relative">
+                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-border/70"></div>
+                    
+                    <div className="relative space-y-12">
+                        {schedule.map((item, index) => (
+                            <div key={item.time} className="relative flex justify-center items-start">
+                                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                                    {index % 2 !== 0 && (
+                                        <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
+                                    )}
+                                </div>
+                                <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8 text-left' : 'pr-8 text-right'}`}>
+                                </div>
+
+                                <div className={`absolute w-[calc(50%_-_2rem)] ${index % 2 === 0 ? 'left-0' : 'right-0'}`}>
+                                    <div className={`p-6 rounded-lg shadow-lg bg-card border border-border/50 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
+                                        <p className="text-primary font-bold font-headline flex items-center gap-2" style={{justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end'}}>
+                                            <Clock className="h-4 w-4" />
+                                            {item.time}
+                                        </p>
+                                        <h3 className="font-headline text-xl font-semibold mt-2">{item.title}</h3>
+                                        <p className="mt-2 text-muted-foreground">{item.description}</p>
                                     </div>
-                                </li>
-                            ))}
-                        </ul>
+                                </div>
+                                
+                                {index % 2 === 0 && (
+                                    <div className="absolute right-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
