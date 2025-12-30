@@ -45,13 +45,13 @@
     {
       "id": "swag-1",
       "description": "Cool event t-shirt.",
-      "imageUrl": "https://images.unsplash.com/photo-1573798484153-da43eda898f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxldmVudCUyMHQtc2hpcnR8ZW58MHx8fHwxNzY3MDY1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1257976/xlarge_Gildan-Pride-T.jpg",
       "imageHint": "event t-shirt"
     },
     {
       "id": "swag-2",
       "description": "Laptop stickers.",
-      "imageUrl": "https://images.unsplash.com/photo-1491252807115-39d1d4a93d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXB0b3AlMjBzdGlja2Vyc3xlbnwwfHx8fDE3NjcwNjUwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://ih1.redbubble.net/image.4114283923.3985/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
       "imageHint": "laptop stickers"
     },
     {
@@ -63,13 +63,13 @@
     {
       "id": "swag-4",
       "description": "Coffee mug with logo.",
-      "imageUrl": "https://images.unsplash.com/photo-1605714196241-00bf7a8fe7bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBtdWd8ZW58MHx8fHwxNzY3MDEwNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1241634/xlarge_Riviera_Mug.jpg",
       "imageHint": "coffee mug"
     },
     {
       "id": "swag-hoodie",
       "description": "Event hoodie with logo.",
-      "imageUrl": "https://images.unsplash.com/photo-1760641372264-24a0a21b28c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxldmVudCUyMGhvb2RpZXxlbnwwfHx8fDE3NjcwNjUyMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1257982/xlarge_Tech%20Spiral%20Hoodie.jpg",
       "imageHint": "event hoodie"
     },
     {
@@ -81,7 +81,7 @@
     {
       "id": "swag-pen-set",
       "description": "A set of pens.",
-      "imageUrl": "https://images.unsplash.com/photo-1662559445362-56cd94023590?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZW4lMjBzZXR8ZW58MHx8fHwxNzY3MDY1MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.brilliantmade.com/uploads/variant_photo/photo/1241635/xlarge_PenPack_V2.jpg",
       "imageHint": "pen set"
     },
     {
