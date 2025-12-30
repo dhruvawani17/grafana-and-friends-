@@ -45,7 +45,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-            <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground rounded-full">
                 <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
                 Register Now
                 </a>
@@ -77,7 +77,7 @@ export default function Header() {
                           {link.label}
                       </Link>
                       ))}
-                      <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4">
+                      <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4 rounded-full">
                           <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
                           Register Now
                           </a>
