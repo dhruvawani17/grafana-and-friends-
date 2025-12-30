@@ -43,16 +43,28 @@
       "imageHint": "professional portrait"
     },
     {
-      "id": "sponsor-grafana",
-      "description": "Grafana Labs logo.",
-      "imageUrl": "https://images.unsplash.com/photo-1761445777166-0d4b6f365f4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsb2dvJTIwZ3JhZmFuYXxlbnwwfHx8fDE3NjY5MDQyMzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo grafana"
+      "id": "swag-1",
+      "description": "Cool event t-shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1573798484153-da43eda898f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxldmVudCUyMHQtc2hpcnR8ZW58MHx8fHwxNzY3MDY1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "event t-shirt"
     },
     {
-      "id": "sponsor-placeholder",
-      "description": "Placeholder for a sponsor logo.",
-      "imageUrl": "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsb2dvJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3NjY4NjU0MzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "logo technology"
+      "id": "swag-2",
+      "description": "Laptop stickers.",
+      "imageUrl": "https://images.unsplash.com/photo-1491252807115-39d1d4a93d7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXB0b3AlMjBzdGlja2Vyc3xlbnwwfHx8fDE3NjcwNjUwNzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop stickers"
+    },
+    {
+      "id": "swag-3",
+      "description": "Branded laptop sleeve.",
+      "imageUrl": "https://images.unsplash.com/photo-1763034179057-acad3a072568?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsYXB0b3AlMjBzbGVldmV8ZW58MHx8fHwxNzY3MDY1MDczfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop sleeve"
+    },
+    {
+      "id": "swag-4",
+      "description": "Coffee mug with logo.",
+      "imageUrl": "https://images.unsplash.com/photo-1605714196241-00bf7a8fe7bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBtdWd8ZW58MHx8fHwxNzY3MDEwNDQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee mug"
     },
     {
       "id": "gallery-1",
