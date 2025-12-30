@@ -52,7 +52,10 @@ export default function BadgePage() {
 
     const badgeImage = new (window as any).Image();
     badgeImage.crossOrigin = 'anonymous';
-    badgeImage.src = photoUrl ? badgeTemplate.imageUrl : (badgeNoPhoto?.imageUrl || '');
+    // Use window.location.origin to create an absolute URL for local assets
+    const badgeUrl = photoUrl ? badgeTemplate.imageUrl : (badgeNoPhoto?.imageUrl || '');
+    badgeImage.src = badgeUrl.startsWith('/') ? window.location.origin + badgeUrl : badgeUrl;
+
 
     badgeImage.onload = () => {
       // Set canvas to image dimensions
@@ -97,6 +100,9 @@ export default function BadgePage() {
         }
       }
     };
+     badgeImage.onerror = () => {
+      console.error('Failed to load badge image:', badgeImage.src);
+    }
   };
 
   const downloadCanvasAsImage = () => {
