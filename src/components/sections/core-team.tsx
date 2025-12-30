@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
@@ -35,7 +34,7 @@ export default function CoreTeamSection() {
                                     <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full transition-shadow group-hover:shadow-lg">
                                         <Image
                                             src={image.imageUrl}
-                                            alt={`Portrait of ${member.name}`}
+                                            alt={`Portrait of a core team member`}
                                             width={200}
                                             height={200}
                                             className="h-full w-full object-cover transition-transform group-hover:scale-110"
@@ -48,10 +47,6 @@ export default function CoreTeamSection() {
                                         </div>
                                     </div>
                                 )}
-                                <div className="mt-4">
-                                    <h3 className="font-headline text-lg font-semibold">{member.name}</h3>
-                                    <p className="mt-1 text-xs text-primary">{member.title}</p>
-                                </div>
                             </div>
                         );
                     })}
