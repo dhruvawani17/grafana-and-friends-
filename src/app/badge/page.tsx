@@ -10,6 +10,7 @@ import { Copy, Download, Upload } from 'lucide-react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
+import TwitterTimeline from '@/components/twitter-timeline';
 
 export default function BadgePage() {
   const { toast } = useToast();
@@ -156,8 +157,8 @@ export default function BadgePage() {
                             <Image
                                 src={badgeTemplate.imageUrl}
                                 alt="Badge preview background"
-                                layout="fill"
-                                objectFit="contain"
+                                fill
+                                style={{objectFit: 'contain'}}
                                 data-ai-hint={badgeTemplate.imageHint}
                             />
                         }
@@ -231,8 +232,7 @@ export default function BadgePage() {
           <section className="mt-16">
             <h2 className="text-center font-headline text-2xl font-semibold">Community on Twitter/X</h2>
              <div className="mt-6 mx-auto max-w-xl">
-                <a className="twitter-timeline" data-height="600" data-theme="dark" href="https://twitter.com/i/lists/1544229563254927360">A Twitter List by grafanafriendsmumbai</a> 
-                <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
+                <TwitterTimeline />
              </div>
           </section>
 
