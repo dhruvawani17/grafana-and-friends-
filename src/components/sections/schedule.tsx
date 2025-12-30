@@ -28,33 +28,20 @@ export default function ScheduleSection() {
                 </div>
 
                 <div className="mt-16 relative">
-                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-1 bg-border/70"></div>
+                    <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border/70" aria-hidden="true"></div>
                     
-                    <div className="relative space-y-12">
+                    <div className="relative flex flex-col gap-y-12">
                         {schedule.map((item, index) => (
-                            <div key={item.time} className="relative flex justify-center items-start">
-                                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                                    {index % 2 !== 0 && (
-                                        <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
-                                    )}
+                            <div key={item.time} className="relative">
+                                <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
+                                <div className={`w-[calc(50%_-_2rem)] p-6 rounded-lg shadow-lg bg-card border border-border/50 ${index % 2 === 0 ? 'ml-auto text-left' : 'mr-auto text-right'}`}>
+                                    <p className={`text-primary font-bold font-headline flex items-center gap-2 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                                        <Clock className="h-4 w-4" />
+                                        {item.time}
+                                    </p>
+                                    <h3 className="font-headline text-xl font-semibold mt-2">{item.title}</h3>
+                                    <p className="mt-2 text-muted-foreground">{item.description}</p>
                                 </div>
-                                <div className={`w-1/2 ${index % 2 === 0 ? 'pl-8 text-left' : 'pr-8 text-right'}`}>
-                                </div>
-
-                                <div className={`absolute w-[calc(50%_-_2rem)] ${index % 2 === 0 ? 'left-0' : 'right-0'}`}>
-                                    <div className={`p-6 rounded-lg shadow-lg bg-card border border-border/50 ${index % 2 === 0 ? 'text-left' : 'text-right'}`}>
-                                        <p className="text-primary font-bold font-headline flex items-center gap-2" style={{justifyContent: index % 2 === 0 ? 'flex-start' : 'flex-end'}}>
-                                            <Clock className="h-4 w-4" />
-                                            {item.time}
-                                        </p>
-                                        <h3 className="font-headline text-xl font-semibold mt-2">{item.title}</h3>
-                                        <p className="mt-2 text-muted-foreground">{item.description}</p>
-                                    </div>
-                                </div>
-                                
-                                {index % 2 === 0 && (
-                                    <div className="absolute right-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary ring-8 ring-background"></div>
-                                )}
                             </div>
                         ))}
                     </div>
