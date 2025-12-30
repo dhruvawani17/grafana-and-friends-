@@ -16,7 +16,7 @@ export default function AboutSection() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="mx-auto max-w-3xl text-center">
                     <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-                        About the Event
+                        About Us
                     </h2>
                     <p className="mt-4 text-lg text-muted-foreground">
                         Grafana & Friends Mumbai is a community-driven event for developers, SREs, and DevOps engineers passionate about observability. Join us for a full day of talks, workshops, and networking.
