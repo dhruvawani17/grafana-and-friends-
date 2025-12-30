@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -8,10 +9,16 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Autoplay from 'embla-carousel-autoplay';
+import React from 'react';
 
 const galleryImages = PlaceHolderImages.filter(p => p.id.startsWith('gallery-'));
 
 export default function GallerySection() {
+    const plugin = React.useRef(
+        Autoplay({ delay: 3000, stopOnInteraction: true })
+    );
+
     return (
         <section id="gallery" className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
@@ -26,11 +33,14 @@ export default function GallerySection() {
                 
                 <div className="mt-16">
                     <Carousel
+                        plugins={[plugin.current]}
                         opts={{
                             align: "start",
                             loop: true,
                         }}
                         className="w-full"
+                        onMouseEnter={plugin.current.stop}
+                        onMouseLeave={plugin.current.reset}
                     >
                         <CarouselContent>
                             {galleryImages.map((image) => (
