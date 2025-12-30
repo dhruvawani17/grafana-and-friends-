@@ -29,7 +29,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https',
+        protocol: 'https' ,
         hostname: 'images.brilliantmade.com',
         port: '',
         pathname: '/**',
@@ -37,6 +37,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'ih1.redbubble.net',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
         port: '',
         pathname: '/**',
       }
