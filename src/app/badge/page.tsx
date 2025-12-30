@@ -1,5 +1,5 @@
 'use client';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import { Button } from '@/components/ui/button';
@@ -17,6 +17,11 @@ export default function BadgePage() {
   const badgeTemplate = PlaceHolderImages.find(p => p.id === 'badge-template');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [userImage, setUserImage] = useState<string | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(socialText);
@@ -38,67 +43,58 @@ export default function BadgePage() {
   };
 
   const drawBadge = (download = false, photoUrl?: string) => {
+    if (!isClient) return;
+
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
     if (!ctx || !canvas || !badgeTemplate) return;
 
-    canvas.width = 1200;
-    canvas.height = 630;
+    const badgeImage = new (window as any).Image();
+    badgeImage.crossOrigin = 'anonymous';
+    badgeImage.src = badgeTemplate.imageUrl;
 
-    const base_image = new (window as any).Image();
-    base_image.crossOrigin = 'anonymous';
-    base_image.src = badgeTemplate.imageUrl;
+    badgeImage.onload = () => {
+        // Set canvas to image dimensions
+        canvas.width = badgeImage.width;
+        canvas.height = badgeImage.height;
 
-    base_image.onload = () => {
-      ctx.drawImage(base_image, 0, 0, canvas.width, canvas.height);
+        // Draw the badge template
+        ctx.drawImage(badgeImage, 0, 0, canvas.width, canvas.height);
 
-      // Simple overlay for demo
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      
-      ctx.font = 'bold 60px Poppins';
-      ctx.fillStyle = 'white';
-      ctx.textAlign = 'center';
-      ctx.fillText('Grafana & Friends', canvas.width / 2, 100);
-      ctx.fillText('Mumbai 2026', canvas.width / 2, 180);
+        if (photoUrl) {
+            const user_image = new (window as any).Image();
+            user_image.crossOrigin = 'anonymous';
+            user_image.src = photoUrl;
+            user_image.onload = () => {
+                // You might need to adjust these values based on your new badge template
+                const size = 250; 
+                const x = (canvas.width / 2) - (size / 2);
+                const y = (canvas.height / 2) - (size / 2) - 50; 
 
-      ctx.font = '40px Poppins';
-      ctx.fillStyle = '#FFC107';
-      ctx.fillText('ATTENDEE', canvas.width / 2, 550);
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+                ctx.closePath();
+                ctx.clip();
+                
+                ctx.drawImage(user_image, x, y, size, size);
+                
+                ctx.beginPath();
+                ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+                ctx.strokeStyle = '#FFC107'; // Example color
+                ctx.lineWidth = 10;
+                ctx.stroke();
+                ctx.restore();
 
-      if (photoUrl) {
-        const user_image = new (window as any).Image();
-        user_image.crossOrigin = 'anonymous';
-        user_image.src = photoUrl;
-        user_image.onload = () => {
-            const size = 250;
-            const x = canvas.width / 2 - size / 2;
-            const y = canvas.height / 2 - size / 2;
-            
-            ctx.save();
-            ctx.beginPath();
-            ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
-            ctx.closePath();
-            ctx.clip();
-            
-            ctx.drawImage(user_image, x, y, size, size);
-            
-            ctx.beginPath();
-            ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
-            ctx.strokeStyle = '#FFC107';
-            ctx.lineWidth = 10;
-            ctx.stroke();
-            ctx.restore();
-
-            if (download) {
+                if (download) {
+                    downloadCanvasAsImage();
+                }
+            };
+        } else {
+             if (download) {
                 downloadCanvasAsImage();
             }
-        };
-      } else {
-        if (download) {
-            downloadCanvasAsImage();
         }
-      }
     };
   };
 
@@ -151,23 +147,39 @@ export default function BadgePage() {
               <Card className="mt-4">
                 <CardContent className="p-6">
                   <div className="relative flex justify-center items-center bg-muted rounded-md aspect-video">
+                    {/* Canvas for drawing is hidden but used for download */}
                     <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{display: 'none'}} />
-                    {badgeTemplate && 
-                        <Image
-                            src={userImage || badgeTemplate.imageUrl}
-                            alt="Badge preview"
-                            width={1200}
-                            height={630}
-                            className={`object-contain max-h-full max-w-full ${userImage ? 'rounded-full w-32 h-32' : ''}`}
-                            data-ai-hint={badgeTemplate.imageHint}
-                        />
-                    }
-                    {!userImage && (
-                        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50">
-                            <Upload className="h-10 w-10 text-white" />
-                            <p className="text-white mt-2">Upload a photo</p>
-                        </div>
-                    )}
+                    
+                    {/* This is the preview area */}
+                    <div className="relative w-full aspect-video">
+                        {badgeTemplate && 
+                            <Image
+                                src={badgeTemplate.imageUrl}
+                                alt="Badge preview background"
+                                layout="fill"
+                                objectFit="contain"
+                                data-ai-hint={badgeTemplate.imageHint}
+                            />
+                        }
+                        {userImage && (
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <Image
+                                    src={userImage}
+                                    alt="Your photo"
+                                    width={150}
+                                    height={150}
+                                    className="rounded-full object-cover border-4 border-amber-400"
+                                />
+                            </div>
+                        )}
+                         {!userImage && (
+                            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/30 rounded-md">
+                                <Upload className="h-10 w-10 text-white" />
+                                <p className="text-white mt-2">Upload a photo</p>
+                            </div>
+                        )}
+                    </div>
+
                   </div>
                   <div className="mt-4 grid grid-cols-2 gap-4">
                     <Button asChild variant="outline">
@@ -195,8 +207,9 @@ export default function BadgePage() {
                       alt="Badge template"
                       width={1200}
                       height={630}
-                      className="rounded-md"
+                      className="rounded-md w-full h-auto"
                       data-ai-hint={badgeTemplate.imageHint}
+                      priority
                     />
                   )}
                   <Button onClick={handleDownloadWithoutPhoto} className="mt-4 w-full bg-accent hover:bg-accent/90 text-accent-foreground">
