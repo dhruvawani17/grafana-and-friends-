@@ -111,13 +111,13 @@
     {
       "id": "badge-template",
       "description": "Badge for Grafana and Friends Mumbai 2026.",
-      "imageUrl": "/badge/withoutphoto.png",
+      "imageUrl": "/badge1.png",
       "imageHint": "badge conference"
     },
     {
       "id": "badge-no-photo",
       "description": "Badge for Grafana and Friends Mumbai 2026 without a photo.",
-      "imageUrl": "/badge/withoutphoto.png",
+      "imageUrl": "/badge2.png",
       "imageHint": "badge conference"
     }
   ]

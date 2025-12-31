@@ -65,29 +65,46 @@ export default function BadgePage() {
       // Draw the badge template
       ctx.drawImage(badgeImage, 0, 0, canvas.width, canvas.height);
 
+      // Draw Date
+      ctx.font = 'bold 20px Arial';
+      ctx.fillStyle = '#000000';
+      ctx.textAlign = 'right';
+      ctx.fillText('FEBRUARY 2026', canvas.width - 20, 55);
+
       if (photoUrl) {
         const user_image = new (window as any).Image();
         user_image.crossOrigin = 'anonymous';
         user_image.src = photoUrl;
         user_image.onload = () => {
           // You might need to adjust these values based on your new badge template
-          const size = 250;
-          const x = (canvas.width / 2) - (size / 2);
-          const y = (canvas.height / 2) - (size / 2) - 50;
+          const size = 300;
+          const x = (canvas.width / 2) - (size / 2) - 265;
+          const y = (canvas.height / 2) - (size / 2) - 100;
 
           ctx.save();
-          ctx.beginPath();
-          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
-          ctx.closePath();
-          ctx.clip();
+          
+          // Calculate aspect ratio for center crop
+          const aspect = user_image.width / user_image.height;
+          let srcX = 0;
+          let srcY = 0;
+          let srcW = user_image.width;
+          let srcH = user_image.height;
 
-          ctx.drawImage(user_image, x, y, size, size);
+          if (aspect > 1) {
+            // Landscape
+            srcW = user_image.height;
+            srcX = (user_image.width - srcW) / 2;
+          } else {
+            // Portrait
+            srcH = user_image.width;
+            srcY = (user_image.height - srcH) / 2;
+          }
 
-          ctx.beginPath();
-          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+          ctx.drawImage(user_image, srcX, srcY, srcW, srcH, x, y, size, size);
+
           ctx.strokeStyle = '#FFC107'; // Example color
           ctx.lineWidth = 10;
-          ctx.stroke();
+          ctx.strokeRect(x, y, size, size);
           ctx.restore();
 
           if (download) {
