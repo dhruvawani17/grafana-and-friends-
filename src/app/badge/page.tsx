@@ -78,10 +78,14 @@ export default function BadgePage() {
         user_image.onload = () => {
           // You might need to adjust these values based on your new badge template
           const size = 300;
-          const x = (canvas.width / 2) - (size / 2) - 265;
-          const y = (canvas.height / 2) - (size / 2) - 100;
+          const x = (canvas.width / 2) - (size / 2) - 250;
+          const y = (canvas.height / 2) - (size / 2) - 105;
 
           ctx.save();
+          ctx.beginPath();
+          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
+          ctx.closePath();
+          ctx.clip();
           
           // Calculate aspect ratio for center crop
           const aspect = user_image.width / user_image.height;
@@ -102,9 +106,11 @@ export default function BadgePage() {
 
           ctx.drawImage(user_image, srcX, srcY, srcW, srcH, x, y, size, size);
 
+          ctx.beginPath();
+          ctx.arc(x + size / 2, y + size / 2, size / 2, 0, Math.PI * 2, true);
           ctx.strokeStyle = '#FFC107'; // Example color
           ctx.lineWidth = 10;
-          ctx.strokeRect(x, y, size, size);
+          ctx.stroke();
           ctx.restore();
 
           if (download) {

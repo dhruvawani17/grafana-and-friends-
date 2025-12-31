@@ -4,12 +4,13 @@ import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 const coreTeam = [
-    { name: 'John Doe', title: 'Lead Organizer', imageId: 'speaker-1', linkedin: '#' },
-    { name: 'Jane Smith', title: 'Community Manager', imageId: 'speaker-2', linkedin: '#' },
-    { name: 'Peter Jones', title: 'Sponsorship Lead', imageId: 'speaker-3', linkedin: '#' },
-    { name: 'Mary Johnson', title: 'Volunteer Coordinator', imageId: 'speaker-4', linkedin: '#' },
-    { name: 'Sam Wilson', title: 'AV Lead', imageId: 'speaker-5', linkedin: '#' },
-    { name: 'Casey Becker', title: 'Social Media Lead', imageId: 'speaker-6', linkedin: '#' },
+    { name: 'Nikita Shinde', title: 'Organizer', imageId: 'core-1', linkedin: '#' },
+    { name: 'Prajwal Deshpande', title: 'Community Manager', imageId: 'core-2', linkedin: '#' },
+    { name: 'Dhruva Wani', title: 'Sponsorship Lead', imageId: 'core-3', linkedin: '#' },
+    { name: 'Krisha Thakkar', title: 'Volunteer Coordinator', imageId: 'core-4', linkedin: '#' },
+    { name: 'Sandesh Deshpande', title: 'AV Lead', imageId: 'core-5', linkedin: '#' },
+    { name: 'Mandar Sarfare', title: 'Social Media Lead', imageId: 'core-6', linkedin: '#' },
+    { name: 'Uddav More', title: 'Social Media Lead', imageId: 'core-7', linkedin: '#' },
 ];
 
 export default function CoreTeamSection() {
