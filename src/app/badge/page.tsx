@@ -187,19 +187,21 @@ export default function BadgePage() {
               <h2 className="font-headline text-2xl font-semibold">With your Photo</h2>
               <Card className="mt-4">
                 <CardContent className="p-6">
-                  <div className="relative flex justify-center items-center bg-muted rounded-md aspect-video">
+                  <div className="relative w-full">
                     {/* Canvas for drawing is hidden but used for download */}
                     <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" style={{ display: 'none' }} />
 
                     {/* This is the preview area */}
-                    <div className="relative w-full aspect-video">
+                    <div className="relative w-full">
                       {badgeTemplate &&
                         <Image
                           src={badgeTemplate.imageUrl}
                           alt="Badge preview background"
-                          fill
-                          style={{ objectFit: 'contain' }}
+                          width={1200}
+                          height={630}
+                          className="w-full h-auto rounded-md"
                           data-ai-hint={badgeTemplate.imageHint}
+                          priority
                         />
                       }
                       {userImage && (
@@ -262,19 +264,19 @@ export default function BadgePage() {
           </div>
 
           <section className="mt-16 text-center">
-            <Button asChild size="lg" className="bg-gradient-to-r from-orange-400 to-rose-400 text-white">
+            {/* <Button asChild size="lg" className="bg-gradient-to-r from-orange-400 to-rose-400 text-white">
               <a href="https://bit.ly/gafm-volunteer" target="_blank" rel="noopener noreferrer">
                 Become the face of Community
               </a>
-            </Button>
+            </Button> */}
           </section>
 
-          <section className="mt-16">
+          {/* <section className="mt-16">
             <h2 className="text-center font-headline text-2xl font-semibold">Community on Twitter/X</h2>
             <div className="mt-6 mx-auto max-w-xl">
               <TwitterTimeline />
             </div>
-          </section>
+          </section> */}
 
         </div>
       </main>

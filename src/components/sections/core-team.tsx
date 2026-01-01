@@ -4,13 +4,13 @@ import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 const coreTeam = [
-    { name: 'Nikita Shinde', title: 'Organizer', imageId: 'core-1', linkedin: '#' },
-    { name: 'Prajwal Deshpande', title: 'Community Manager', imageId: 'core-2', linkedin: '#' },
-    { name: 'Dhruva Wani', title: 'Sponsorship Lead', imageId: 'core-3', linkedin: '#' },
-    { name: 'Krisha Thakkar', title: 'Volunteer Coordinator', imageId: 'core-4', linkedin: '#' },
-    { name: 'Sandesh Deshpande', title: 'AV Lead', imageId: 'core-5', linkedin: '#' },
-    { name: 'Mandar Sarfare', title: 'Social Media Lead', imageId: 'core-6', linkedin: '#' },
-    { name: 'Uddav More', title: 'Social Media Lead', imageId: 'core-7', linkedin: '#' },
+    { name: 'Nikita Shinde', title: 'Organizer', imageId: 'core-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
+    { name: 'Prajwal Deshpande', title: 'Community Manager', imageId: 'core-2', linkedin: 'https://www.linkedin.com/in/d-prajwal/' },
+    { name: 'Dhruva Wani', title: 'Sponsorship Lead', imageId: 'core-3', linkedin: 'https://www.linkedin.com/in/dhruvawani17/' },
+    { name: 'Krisha Thakkar', title: 'Volunteer Coordinator', imageId: 'core-4', linkedin: 'https://www.linkedin.com/in/krisha-thakkar-bb1687311/' },
+    { name: 'Sandesh Deshpande', title: 'AV Lead', imageId: 'core-5', linkedin: 'https://www.linkedin.com/in/sandesh-deshpande-32700940/' },
+    { name: 'Mandar Sarfare', title: 'Social Media Lead', imageId: 'core-6', linkedin: 'https://www.linkedin.com/in/mandar-sarfare/' },
+    { name: 'Uddhav More', title: 'Social Media Lead', imageId: 'core-7', linkedin: 'https://www.linkedin.com/in/uddhav-more/' },
 ];
 
 export default function CoreTeamSection() {
