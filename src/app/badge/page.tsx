@@ -66,10 +66,10 @@ export default function BadgePage() {
       ctx.drawImage(badgeImage, 0, 0, canvas.width, canvas.height);
 
       // Draw Date
-      ctx.font = 'bold 20px Arial';
+      ctx.font = 'bold 20px cormorant Garamond';
       ctx.fillStyle = '#000000';
       ctx.textAlign = 'right';
-      ctx.fillText('FEBRUARY 2026', canvas.width - 20, 55);
+      ctx.fillText('FEBRUARY 2026', canvas.width - 30, 55);
 
       if (photoUrl) {
         const user_image = new (window as any).Image();

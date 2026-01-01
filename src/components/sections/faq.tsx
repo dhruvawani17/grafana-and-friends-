@@ -5,6 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Link from "next/link";
+import Image from "next/image";
 
 const faqs = [
     {
@@ -52,25 +53,49 @@ const faqs = [
 
 export default function FaqSection() {
     return (
-        <section id="faq" className="py-16 md:py-24 bg-secondary">
+        <section id="faq" className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="mx-auto max-w-3xl text-center">
-                    <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">
-                        Frequently Asked Questions
-                    </h2>
-                </div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Left Column: Title and Image */}
+                    <div className="flex flex-col items-start space-y-8">
+                        <h2 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
+                            Frequently Asked <br />
+                            <span className="text-primary">Questions</span>
+                        </h2>
+                        <div className="relative w-full max-w-md aspect-square mx-auto lg:mx-0">
+                             {/* Placeholder for the illustration - using a generic one or you can upload the specific one */}
+                             <div className="absolute inset-0 flex items-center justify-center">
+                                <Image 
+                                    src="/faq.webp" // Using an existing image as placeholder, replace with your illustration
+                                    alt="FAQ Illustration"
+                                    width={400}
+                                    height={400}
+                                    className="object-contain"
+                                />
+                             </div>
+                        </div>
+                    </div>
 
-                <div className="mt-12 mx-auto max-w-3xl">
-                    <Accordion type="single" collapsible className="w-full">
-                        {faqs.map((faq, index) => (
-                             <AccordionItem value={`item-${index}`} key={index}>
-                                <AccordionTrigger className="text-left font-headline text-lg hover:no-underline">{faq.question}</AccordionTrigger>
-                                <AccordionContent className="text-base text-muted-foreground">
-                                    {faq.answer}
-                                </AccordionContent>
-                            </AccordionItem>
-                        ))}
-                    </Accordion>
+                    {/* Right Column: Accordion */}
+                    <div className="w-full">
+                        <Accordion type="single" collapsible className="w-full space-y-4">
+                            {faqs.map((faq, index) => (
+                                <AccordionItem 
+                                    value={`item-${index}`} 
+                                    key={index}
+                                    className="border-b border-border px-0"
+                                >
+                                    <AccordionTrigger className="text-left font-headline text-xl font-medium hover:no-underline py-6 [&[data-state=open]]:text-primary transition-colors">
+                                        <span className="mr-4 text-2xl font-bold opacity-50">{String(index + 1).padStart(2, '0')}</span>
+                                        {faq.question}
+                                    </AccordionTrigger>
+                                    <AccordionContent className="text-base text-muted-foreground pb-6 pl-12">
+                                        {faq.answer}
+                                    </AccordionContent>
+                                </AccordionItem>
+                            ))}
+                        </Accordion>
+                    </div>
                 </div>
             </div>
         </section>
