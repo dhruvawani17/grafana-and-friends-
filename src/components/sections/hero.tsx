@@ -48,25 +48,28 @@ export default function HeroSection() {
           <p className="mt-3 max-w-2xl mx-auto font-headline text-2xl font-semibold sm:text-3xl md:text-4xl">
             Mumbai Chapter
           </p>
+          <p className="mt-4 text-lg md:text-2xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#FFF59D] via-[#FFD54F] to-[#FFB74D] animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300 drop-shadow-sm">
+            Where Mumbai Talks Observability & Open Source
+          </p>
           
           <div className="mt-8 flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-lg">
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
               <Calendar className="h-5 w-5 text-primary" />
               <span>28th February, 2026</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+            </div> */}
+            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
               <Clock className="h-5 w-5 text-primary" />
               <span>10:00 AM - 5:00 PM</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+            </div> */}
+            {/* <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
               <MapPin className="h-5 w-5 text-primary" />
               <span>Venue TBD, Mumbai</span>
-            </div>
+            </div> */}
           </div>
           
           <div className="mt-10">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/30">
-              <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.meetup.com/grafana-and-friends-mumbai/" target="_blank" rel="noopener noreferrer">
                 Register for Free
               </a>
             </Button>

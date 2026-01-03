@@ -16,15 +16,15 @@ import Autoplay from 'embla-carousel-autoplay';
 import React from 'react';
 
 const speakers = [
-    { name: 'Awesome Speaker', title: 'Principal Engineer, Acme Inc.', imageId: 'speaker-1' },
-    { name: 'Another Speaker', title: 'SRE, Contoso Ltd.', imageId: 'speaker-2' },
-    { name: 'Keynote Speaker', title: 'CTO, Stark Industries', imageId: 'speaker-3' },
-    { name: 'Community Speaker', title: 'Open Source Contributor', imageId: 'speaker-4' },
+    { name: 'Nikita Shinde', title: ' ', imageId: 'speaker-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
+    { name: 'Yash Kalwani', title: '', imageId: 'speaker-2', linkedin: 'https://www.linkedin.com/in/kalwani-yash/' },
+    { name: 'Pratik Parik', title: '', imageId: 'speaker-3', linkedin: 'https://www.linkedin.com/in/parikh-pratik/' },
+    { name: 'Community Speaker', title: '', imageId: 'speaker-4', linkedin: '#' },
 ];
 
 export default function SpeakersSection() {
     const plugin = React.useRef(
-        Autoplay({ delay: 3000, stopOnInteraction: true })
+        Autoplay({ delay: 1700, stopOnInteraction: false })
     );
 
     return (
@@ -55,28 +55,27 @@ export default function SpeakersSection() {
                                 const image = PlaceHolderImages.find(p => p.id === speaker.imageId);
                                 return (
                                     <CarouselItem key={speaker.name} className="p-4 md:basis-1/2 lg:basis-1/4">
-                                        <Card className="overflow-hidden text-center transition-transform hover:scale-105 hover:shadow-xl h-full">
-                                            <CardHeader className="p-0">
-                                                {image && (
+                                        <div className="group relative text-center h-full flex flex-col items-center justify-center">
+                                            {image && (
+                                                <div className="relative mx-auto h-48 w-48 overflow-hidden rounded-full ring-4 ring-white shadow-lg transition-all duration-300 group-hover:ring-primary group-hover:shadow-xl group-hover:scale-105">
                                                     <Image
                                                         src={image.imageUrl}
                                                         alt={`Portrait of ${speaker.name}`}
                                                         width={500}
                                                         height={500}
-                                                        className="aspect-square object-cover"
+                                                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                                         data-ai-hint={image.imageHint}
                                                     />
-                                                )}
-                                            </CardHeader>
-                                            <CardContent className="p-6">
+                                                </div>
+                                            )}
+                                            <div className="mt-6">
                                                 <h3 className="font-headline text-xl font-semibold">{speaker.name}</h3>
                                                 <p className="mt-1 text-sm text-primary">{speaker.title}</p>
-                                            </CardContent>
-                                            <CardFooter className="flex justify-center gap-4 pb-6">
-                                                <Link href="#" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-                                                <Link href="#" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
-                                            </CardFooter>
-                                        </Card>
+                                                <div className="mt-4 flex justify-center gap-4">
+                                                    <Link href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary"><Linkedin className="h-5 w-5" /></Link>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </CarouselItem>
                                 );
                             })}

@@ -15,13 +15,13 @@
     {
       "id": "speaker-2",
       "description": "Placeholder image for a speaker.",
-      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/speaker2.png",
       "imageHint": "professional portrait"
     },
     {
       "id": "speaker-3",
       "description": "Placeholder image for a speaker.",
-      "imageUrl": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4NzYzOTB8MA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/speaker3.png",
       "imageHint": "professional portrait"
     },
     {

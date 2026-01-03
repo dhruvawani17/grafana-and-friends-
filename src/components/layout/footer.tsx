@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Twitter, Linkedin, Github } from 'lucide-react';
+import Image from 'next/image';
+import { Twitter, Linkedin, Github, Instagram, Slack } from 'lucide-react';
 import { GrafanaLogo } from '@/components/icons/grafana-logo';
 
 export default function Footer() {
@@ -12,11 +13,20 @@ export default function Footer() {
             <span>Grafana & Friends Mumbai</span>
           </Link>
           <div className="flex items-center gap-4">
-            <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary">
+            <Link href="https://www.meetup.com/grafana-and-friends-mumbai/" target="_blank" rel="noopener noreferrer" aria-label="Meetup" className="text-muted-foreground hover:text-primary">
+              <Image src="/meetup.svg" alt="Meetup" width={20} height={20} className="h-5 w-5" />
+            </Link>
+            <Link href="https://www.linkedin.com/in/grafana-user-group-mumbai-50149b386/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
+              <Linkedin className="h-5 w-5" />
+            </Link>
+            <Link href="https://twitter.com/grafanamumbai" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary">
               <Twitter className="h-5 w-5" />
             </Link>
-            <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary">
-              <Linkedin className="h-5 w-5" />
+            <Link href="https://www.instagram.com/grafanamumbai?igsh=Mmhqcnh3Zmd2bmU5" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary">
+              <Instagram className="h-5 w-5" />
+            </Link>
+            <Link href="https://grafana.slack.com/archives/C01FMSQ6A8L" target="_blank" rel="noopener noreferrer" aria-label="Slack" className="text-muted-foreground hover:text-primary">
+              <Slack className="h-5 w-5" />
             </Link>
             <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-primary">
               <Github className="h-5 w-5" />

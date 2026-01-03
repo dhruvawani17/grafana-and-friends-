@@ -27,7 +27,7 @@ export default function CoreTeamSection() {
                     </p>
                 </div>
 
-                <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 md:grid-cols-6">
+                <div className="mt-12 grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 md:grid-cols-4">
                     {coreTeam.map((member) => {
                         const image = PlaceHolderImages.find(p => p.id === member.imageId);
                         return (

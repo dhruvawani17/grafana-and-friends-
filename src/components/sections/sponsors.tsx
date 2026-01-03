@@ -23,7 +23,7 @@ const swags = [
 
 export default function SponsorsSection() {
     const plugin = React.useRef(
-        Autoplay({ delay: 3000, stopOnInteraction: true })
+        Autoplay({ delay: 1700, stopOnInteraction: false })
     );
 
     return (

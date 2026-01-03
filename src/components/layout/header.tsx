@@ -26,7 +26,7 @@ const navLinks = [
 export default function Header() {
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b bg-primary"
+      className="sticky top-0 z-50 w-full border-b bg-[#f9a825]"
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-headline text-lg font-semibold text-primary-foreground">
@@ -45,10 +45,10 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-            <Button asChild className="hidden md:inline-flex bg-accent hover:bg-accent/90 text-accent-foreground rounded-full">
-                <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
+            <Button asChild className="hidden md:inline-flex bg-blue-200 hover:bg-blue-300 text-blue-900 rounded-full">
+                <Link href="/join">
                 Join Now
-                </a>
+                </Link>
             </Button>
             <Sheet>
                 <SheetTrigger asChild>
@@ -77,10 +77,10 @@ export default function Header() {
                           {link.label}
                       </Link>
                       ))}
-                      <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-4 rounded-full">
-                          <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
+                      <Button asChild className="bg-blue-200 hover:bg-blue-300 text-blue-900 mt-4 rounded-full">
+                          <Link href="/join">
                           Join Now
-                          </a>
+                          </Link>
                       </Button>
                   </nav>
                 </SheetContent>
