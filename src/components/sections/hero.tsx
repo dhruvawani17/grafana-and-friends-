@@ -50,22 +50,22 @@ export default function HeroSection() {
           </p>
           
           <div className="mt-8 flex flex-wrap justify-center items-center gap-x-6 gap-y-4 text-lg">
-            <div className="flex items-center gap-2">
-              <Calendar className="h-5 w-5 text-accent" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+              <Calendar className="h-5 w-5 text-primary" />
               <span>28th February, 2026</span>
             </div>
-            <div className="flex items-center gap-2">
-              <Clock className="h-5 w-5 text-accent" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+              <Clock className="h-5 w-5 text-primary" />
               <span>10:00 AM - 5:00 PM</span>
             </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-accent" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full shadow-sm hover:bg-white/20 transition-colors">
+              <MapPin className="h-5 w-5 text-primary" />
               <span>Venue TBD, Mumbai</span>
             </div>
           </div>
           
           <div className="mt-10">
-            <Button size="lg" asChild className="bg-accent hover:bg-accent/80 text-accent-foreground text-lg px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 rounded-full shadow-xl shadow-primary/20 transition-all hover:scale-105 hover:shadow-2xl hover:shadow-primary/30">
               <a href="https://konfhub.com/gafm26#tickets" target="_blank" rel="noopener noreferrer">
                 Register for Free
               </a>

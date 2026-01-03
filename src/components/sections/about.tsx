@@ -1,7 +1,7 @@
 import { Target, Users, Zap } from 'lucide-react';
 
 const AboutCard = ({ icon, title, children }: { icon: React.ReactNode, title: string, children: React.ReactNode }) => (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center p-6 rounded-2xl bg-card border border-border/50 shadow-sm transition-all hover:shadow-md hover:-translate-y-1">
         <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
             {icon}
         </div>

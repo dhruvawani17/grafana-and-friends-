@@ -64,8 +64,19 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(at 0% 0%, hsla(25, 67%, 96%, 1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(45, 100%, 90%, 1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(25, 67%, 96%, 1) 0, transparent 50%);
+    background-attachment: fixed;
   }
   html {
     @apply scroll-smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+  .glass-dark {
+    @apply bg-black/70 backdrop-blur-md border border-white/10 shadow-sm;
   }
 }

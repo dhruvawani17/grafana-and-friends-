@@ -33,22 +33,26 @@ export default function CoreTeamSection() {
                         return (
                             <div key={member.name} className="group relative text-center">
                                 {image && (
-                                    <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full transition-shadow group-hover:shadow-lg">
+                                    <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full ring-4 ring-white shadow-lg transition-all duration-300 group-hover:ring-primary group-hover:shadow-xl group-hover:scale-10">
                                         <Image
                                             src={image.imageUrl}
                                             alt={`Portrait of a core team member`}
                                             width={200}
                                             height={200}
-                                            className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                                             data-ai-hint={image.imageHint}
                                         />
-                                        <div className="absolute inset-0 flex items-center justify-center rounded-full bg-black/60 opacity-0 transition-opacity group-hover:opacity-100">
-                                            <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary">
+                                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 backdrop-blur-[2px] transition-all duration-300 group-hover:opacity-100">
+                                            <Link href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                                                 <Linkedin className="h-8 w-8" />
                                             </Link>
                                         </div>
                                     </div>
                                 )}
+                                {/* <div className="mt-4">
+                                    <h3 className="font-headline text-lg font-bold text-foreground">{member.name}</h3>
+                                    <p className="text-sm text-muted-foreground">{member.title}</p>
+                                </div> */}
                             </div>
                         );
                     })}
