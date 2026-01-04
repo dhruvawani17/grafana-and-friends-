@@ -23,7 +23,7 @@ const swags = [
 
 export default function SponsorsSection() {
     const plugin = React.useRef(
-        Autoplay({ delay: 1700, stopOnInteraction: false })
+        Autoplay({ delay: 2000, stopOnInteraction: false, stopOnMouseEnter: true })
     );
 
     return (
@@ -46,8 +46,6 @@ export default function SponsorsSection() {
                             loop: true,
                         }}
                         className="w-full max-w-4xl mx-auto"
-                        onMouseEnter={plugin.current.stop}
-                        onMouseLeave={plugin.current.reset}
                     >
                         <CarouselContent>
                             {swags.map((swag) => {

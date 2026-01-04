@@ -24,7 +24,7 @@ const speakers = [
 
 export default function SpeakersSection() {
     const plugin = React.useRef(
-        Autoplay({ delay: 1700, stopOnInteraction: false })
+        Autoplay({ delay: 1700, stopOnInteraction: false, stopOnMouseEnter: true })
     );
 
     return (
@@ -47,8 +47,6 @@ export default function SpeakersSection() {
                             loop: true,
                         }}
                         className="w-full max-w-5xl mx-auto"
-                        onMouseEnter={plugin.current.stop}
-                        onMouseLeave={plugin.current.reset}
                     >
                         <CarouselContent>
                             {speakers.map((speaker) => {
