@@ -209,13 +209,20 @@ export default function BadgePage() {
                         />
                       }
                       {userImage && (
-                        <div className="absolute inset-0 flex items-center justify-center">
+                        <div 
+                          className="absolute aspect-square rounded-full overflow-hidden border-4 border-amber-400"
+                          style={{
+                            // Adjust these values to position the photo correctly on the badge
+                            top: '31.5%', 
+                            left: '13.3%', 
+                            width: '27%',
+                          }}
+                        >
                           <Image
                             src={userImage}
                             alt="Your photo"
-                            width={150}
-                            height={150}
-                            className="rounded-full object-cover border-4 border-amber-400"
+                            fill
+                            className="object-cover"
                           />
                         </div>
                       )}
