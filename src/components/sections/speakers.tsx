@@ -19,7 +19,7 @@ const speakers = [
     { name: 'Nikita Shinde', title: ' ', imageId: 'speaker-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
     { name: 'Yash Kalwani', title: '', imageId: 'speaker-2', linkedin: 'https://www.linkedin.com/in/kalwani-yash/' },
     { name: 'Pratik Parik', title: '', imageId: 'speaker-3', linkedin: 'https://www.linkedin.com/in/parikh-pratik/' },
-    { name: 'Community Speaker', title: '', imageId: 'speaker-4', linkedin: '#' },
+    { name: 'Shantanu', title: '', imageId: 'speaker-4', linkedin: '#' },
 ];
 
 export default function SpeakersSection() {
