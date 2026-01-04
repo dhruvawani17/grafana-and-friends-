@@ -213,7 +213,7 @@ export default function BadgePage() {
                           className="absolute aspect-square rounded-full overflow-hidden border-4 border-amber-400"
                           style={{
                             // Adjust these values to position the photo correctly on the badge
-                            top: '31.5%', 
+                            top: '30.7%', 
                             left: '13.3%', 
                             width: '27%',
                           }}
