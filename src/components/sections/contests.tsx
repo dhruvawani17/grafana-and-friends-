@@ -30,10 +30,9 @@ export default function ContestsSection() {
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 text-muted-foreground">
-                                    <p>Register for the event at awsugjaipur.in and receive the customised referral link in the confirmation email.</p>
-                                    <p>Share the referral link in your circle / professional network and encourage them to register for the event.</p>
-                                    <p>Ensure participation of those you have referred during the event day.</p>
-                                    <p>Check the leaderboard here, see your score and be among the top leaders.</p>
+                                    <p> 🔹 Register for the event at grafanaandfriends.in and receive your customized referral link in the confirmation email. </p>
+
+<p>🔹 Share your referral link within your circle and professional network, and invite others to register for the event. </p>
                                 </CardContent>
                             </Card>
                         </TabsContent>
@@ -46,9 +45,9 @@ export default function ContestsSection() {
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4 text-muted-foreground">
-                                   <p>Register for the Event & show your excitement about ACDR-2026 in a creative way & create innovative memes.</p>
+                                   <p>Register for the Event & show your excitement about Grafana and Friends Mumbai in a creative way & create innovative memes.</p>
                                    <p>Post it on your socials and tag Grafana and Friends Mumbai with the hashtag.</p>
-                                   <p>Winners will be announced on upcoming Sundays (3rd, 17th, 31th Jan and 14th Feb).</p>
+                                   {/* <p>Winners will be announced on upcoming Sundays (3rd, 17th, 31th Jan and 14th Feb).</p> */}
                                    <p>Winners will get Premium Grafana Goodies on 28th Feb at Event.</p>
                                 </CardContent>
                             </Card>

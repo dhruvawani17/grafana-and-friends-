@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -11,7 +12,6 @@ import {
   SheetDescription,
 } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
-import { GrafanaLogo } from '@/components/icons/grafana-logo';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -30,7 +30,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2 font-headline text-lg font-semibold text-primary-foreground">
-          <GrafanaLogo className="h-6 w-6" />
+          <Image src="/logo-header.png" alt="Grafana & Friends Mumbai" width={32} height={32} className="h-8 w-auto" />
           <span>Grafana & Friends Mumbai</span>
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex">
@@ -61,7 +61,7 @@ export default function Header() {
                   <SheetHeader>
                     <SheetTitle asChild>
                       <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
-                          <GrafanaLogo className="h-6 w-6 text-primary" />
+                          <Image src="/logo-header.png" alt="G&F Mumbai" width={32} height={32} className="h-8 w-auto" />
                           <span>G&F Mumbai</span>
                       </Link>
                     </SheetTitle>
