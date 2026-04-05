@@ -51,7 +51,7 @@
     {
       "id": "core-2",
       "description": "Placeholder image for a speaker.",
-      "imageUrl": "/prajwal.jpeg",
+      "imageUrl": "/prajwal.png",
       "imageHint": "professional portrait"
     },
     {
@@ -130,7 +130,7 @@
     {
       "id": "gallery-1",
       "description": "Image from a past tech conference.",
-      "imageUrl": "https://images.unsplash.com/photo-1582192493926-93f4847e1323?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWNoJTIwY29uZmVyZW5jZXxlbnwwfHx8fDE3NjY4NTYzMTJ8MA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/event4.png",
       "imageHint": "tech conference"
     },
     {
@@ -154,7 +154,13 @@
     {
       "id": "gallery-5",
       "description": "People collaborating at a workshop.",
-      "imageUrl": "/event1.jpeg",
+      "imageUrl": "/event5.jpg",
+      "imageHint": "workshop collaboration"
+    },
+    {
+      "id": "gallery-5",
+      "description": "People collaborating at a workshop.",
+      "imageUrl": "/event2.jpeg",
       "imageHint": "workshop collaboration"
     },
     {
