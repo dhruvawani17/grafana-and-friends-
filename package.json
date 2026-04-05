@@ -2,6 +2,22 @@
   "name": "nextn",
   "version": "0.1.0",
   "private": true,
+  "description": "",
+  "homepage": "https://github.com/dhruvawani17/grafana-and-friends-#readme",
+  "bugs": {
+    "url": "https://github.com/dhruvawani17/grafana-and-friends-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruvawani17/grafana-and-friends-.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "test-shadow.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "dev": "next dev --turbopack -p 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",

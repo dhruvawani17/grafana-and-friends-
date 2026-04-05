@@ -3,7 +3,6 @@ import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
 import AboutSection from '@/components/sections/about';
 import SpeakersSection from '@/components/sections/speakers';
-import ScheduleSection from '@/components/sections/schedule';
 import SponsorsSection from '@/components/sections/sponsors';
 import GallerySection from '@/components/sections/gallery';
 import FaqSection from '@/components/sections/faq';
@@ -19,7 +18,6 @@ export default function Home() {
         <AboutSection />
         <SpeakersSection />
         <CoreTeamSection />
-        <ScheduleSection />
         <ContestsSection />
         <SponsorsSection />
         <GallerySection />

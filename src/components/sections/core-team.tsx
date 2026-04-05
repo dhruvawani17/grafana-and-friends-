@@ -4,11 +4,11 @@ import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 const coreTeam = [
-    { name: 'Nikita Shinde', title: 'Organizer', imageId: 'core-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
-    { name: 'Prajwal Deshpande', title: 'Community Manager', imageId: 'core-2', linkedin: 'https://www.linkedin.com/in/d-prajwal/' },
-    { name: 'Dhruva Wani', title: 'Sponsorship Lead', imageId: 'core-3', linkedin: 'https://www.linkedin.com/in/dhruvawani17/' },
-    { name: 'Krisha Thakkar', title: 'Volunteer Coordinator', imageId: 'core-4', linkedin: 'https://www.linkedin.com/in/krisha-thakkar-bb1687311/' },
-    { name: 'Sandesh Deshpande', title: 'AV Lead', imageId: 'core-5', linkedin: 'https://www.linkedin.com/in/sandesh-deshpande-32700940/' },
+    { name: 'Nikita Shinde', title: 'Organiser', imageId: 'core-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
+    { name: 'Prajwal Deshpande', title: 'Co-organiser', imageId: 'core-2', linkedin: 'https://www.linkedin.com/in/d-prajwal/' },
+    { name: 'Dhruva Wani', title: 'Web Developer', imageId: 'core-3', linkedin: 'https://www.linkedin.com/in/dhruvawani17/' },
+    { name: 'Krisha Thakkar', title: 'Social Media Lead', imageId: 'core-4', linkedin: 'https://www.linkedin.com/in/krisha-thakkar-bb1687311/' },
+    { name: 'Sandesh Deshpande', title: 'Social Media Lead', imageId: 'core-5', linkedin: 'https://www.linkedin.com/in/sandesh-deshpande-32700940/' },
     { name: 'Mandar Sarfare', title: 'Social Media Lead', imageId: 'core-6', linkedin: 'https://www.linkedin.com/in/mandar-sarfare/' },
     { name: 'Uddhav More', title: 'Social Media Lead', imageId: 'core-7', linkedin: 'https://www.linkedin.com/in/uddhav-more/' },
     { name: 'Vanshika ', title: 'Social Media Lead', imageId: 'core-8', linkedin: 'https://www.linkedin.com/in/vanshikajain622' },
@@ -49,10 +49,10 @@ export default function CoreTeamSection() {
                                         </div>
                                     </div>
                                 )}
-                                {/* <div className="mt-4">
+                                <div className="mt-4">
                                     <h3 className="font-headline text-lg font-bold text-foreground">{member.name}</h3>
                                     <p className="text-sm text-muted-foreground">{member.title}</p>
-                                </div> */}
+                                </div>
                             </div>
                         );
                     })}
