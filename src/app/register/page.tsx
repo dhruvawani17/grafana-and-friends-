@@ -12,6 +12,17 @@ import Image from 'next/image';
 
 export default function RegisterPage() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+  const [showIntro, setShowIntro] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
+
+  useEffect(() => {
+    // Intro timing is now driven by audio playback (onEnded event)
+  }, []);
+
+  const endIntroTransition = () => {
+    setIsFadingOut(true);
+    setTimeout(() => setShowIntro(false), 1000);
+  };
 
   useEffect(() => {
     const targetDate = new Date('2026-06-13T00:00:00').getTime();
@@ -36,11 +47,135 @@ export default function RegisterPage() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const renderIntro = () => {
+    if (!showIntro) return null;
+    const line1 = "LADIES AND GENTLEMEN".split(" ");
+    const line2 = "YOU ARE NOT READY FOR THIS".split(" ");
+    const totalWords = line1.length + line2.length;
+
+    return (
+      <div className={`fixed inset-0 z-[200] bg-black flex flex-col items-center justify-center overflow-hidden transition-opacity duration-1000 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}>
+        <style dangerouslySetInnerHTML={{__html: `
+          @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&display=swap');
+          
+          @keyframes cinematicWord {
+            0% { opacity: 0; transform: scale(2) translateZ(150px) translateY(20px); filter: blur(20px); }
+            15% { opacity: 1; transform: scale(0.95); filter: brightness(2.5) drop-shadow(0 0 20px rgba(255,100,0,0.8)) blur(0px); }
+            30% { transform: scale(1); filter: brightness(1) drop-shadow(0 0 0px transparent); }
+            100% { opacity: 1; transform: scale(1.05); filter: brightness(1); }
+          }
+          @keyframes flashPulse {
+            0%, 100% { box-shadow: inset 0 0 0px 0px rgba(0, 0, 0, 1); }
+            50% { box-shadow: inset 0 0 150px 30px rgba(200, 50, 0, 0.3); }
+          }
+          .text-fire {
+            background: linear-gradient(180deg, #e5e5e5 0%, #999999 35%, #ff5500 75%, #ffaa00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1.5px rgba(255,255,255,0.1);
+            filter: drop-shadow(0px 8px 16px rgba(255, 69, 0, 0.4));
+          }
+          .text-gold {
+            background: linear-gradient(180deg, #fffde7 0%, #e6c27a 40%, #b8860b 80%, #8b6508 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 1.5px rgba(255,255,255,0.1);
+            filter: drop-shadow(0px 8px 16px rgba(218, 165, 32, 0.4));
+          }
+          .word-wrap {
+            display: inline-block;
+            opacity: 0;
+            will-change: transform, opacity, filter;
+          }
+          .cinematic-container {
+             font-family: 'Cinzel', serif;
+             perspective: 1200px;
+          }
+        `}} />
+        <div className="absolute inset-0 z-0 pointer-events-none" style={{ animation: 'flashPulse 10s ease-in-out forwards' }}></div>
+        
+        {/* Background audio track */}
+        <audio 
+          src="/title.mp3" 
+          loop={false} 
+          preload="auto" 
+          onEnded={endIntroTransition}
+          ref={(audioEl) => {
+            if (audioEl && !audioEl.dataset.played) {
+              audioEl.dataset.played = "true";
+              setTimeout(() => {
+                audioEl.play().catch(e => {
+                  console.log("Audio play blocked", e);
+                  // Optional fallback timing for strict browser autoplay blocking
+                  setTimeout(endIntroTransition, 8500);
+                });
+              }, 1500);
+            }
+          }}
+        />
+
+        <div className="cinematic-container w-full px-4 sm:px-8 flex flex-col items-center justify-center gap-y-8 relative z-10">
+          {/* First Line: Spreads across the first 2 seconds */}
+          <div className="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 md:gap-x-8">
+            {line1.map((word, i) => {
+              const delay = i * (1.9 / line1.length); // Finishes dropping just before 2s mark
+              return (
+                <span
+                  key={`l1-${i}`}
+                  className="word-wrap text-fire text-[6vw] sm:text-[5vw] md:text-[4.5vw] lg:text-[4vw] font-black uppercase tracking-widest"
+                  style={{
+                    animation: `cinematicWord 8s cubic-bezier(0.1, 0.9, 0.2, 1) forwards`,
+                    animationDelay: `${delay}s`,
+                  }}
+                >
+                  {word}
+                </span>
+              );
+            })}
+          </div>
+
+          {/* Second Line: Starts at 2 seconds, ends before 4 seconds */}
+          <div className="flex flex-wrap justify-center gap-x-4 sm:gap-x-6 md:gap-x-8">
+            {line2.map((word, i) => {
+              const delay = 2 + (i * (1.9 / line2.length)); // Starts exactly at 2 seconds, completes just before 4s
+              return (
+                <span
+                  key={`l2-${i}`}
+                  className="word-wrap text-gold text-[7vw] sm:text-[6vw] md:text-[5vw] lg:text-[4.5vw] font-black uppercase tracking-widest"
+                  style={{
+                    animation: `cinematicWord 8s cubic-bezier(0.1, 0.9, 0.2, 1) forwards`,
+                    animationDelay: `${delay}s`,
+                  }}
+                >
+                  {word}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="flex flex-col min-h-screen bg-[#F4F5F5]">
-      <Header />
+    <>
+      {renderIntro()}
+      <div className="flex flex-col min-h-screen bg-[#F4F5F5]">
+        <Header />
       
-      <main className="flex-1 w-full relative">
+      <main className="flex-1 w-full relative overflow-hidden">
+        {/* Enthusiastic background-synced messaging */}
+        
+        {/* Top Text: Just below the navbar */}
+        <div className="absolute top-6 left-0 right-0 z-[5] flex justify-center pointer-events-none opacity-90 mix-blend-hard-light">
+          <div 
+            className="text-[5vw] sm:text-[3vw] md:text-[2.5vw] font-bold uppercase text-center tracking-widest bg-black px-8 py-3 border-4 border-[#FFB800] transform -rotate-2 shadow-[8px_8px_0px_0px_#FF6A00]"
+            style={{ fontFamily: '"Fantomen", sans-serif', color: '#FFFFFF' }}
+          >
+            OUR BIGGEST EVENT YET
+          </div>
+        </div>
+
         <HeroSection />
 
         {/* What's happening section */}
@@ -571,5 +706,6 @@ export default function RegisterPage() {
       </main>
 
     </div>
+    </>
   );
 }
