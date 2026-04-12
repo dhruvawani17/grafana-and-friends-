@@ -11,7 +11,7 @@ const coreTeam = [
     { name: 'Sandesh Deshpande', title: 'Solutions architect @ Team Computers', imageId: 'core-5', linkedin: 'https://www.linkedin.com/in/sandesh-deshpande-32700940/' },
     { name: 'Mandar Sarfare', title: 'SRE @ IBM', imageId: 'core-6', linkedin: 'https://www.linkedin.com/in/mandar-sarfare/' },
     { name: 'Uddhav More', title: 'Cloud infra support @ wipro', imageId: 'core-7', linkedin: 'https://www.linkedin.com/in/uddhav-more/' },
-    { name: 'Vanshika ', title: 'Social Media Lead', imageId: 'core-8', linkedin: 'https://www.linkedin.com/in/vanshikajain622' },
+    { name: 'Inshirah ', title: 'Social Media Lead', imageId: 'core-8', linkedin: 'https://www.linkedin.com/in/vanshikajain622' },
 ];
 
 export default function CoreTeamSection() {

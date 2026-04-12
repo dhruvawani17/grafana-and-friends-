@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Lock, Tag, Users, BookOpen, MessageSquare, Megaphone, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import confetti from 'canvas-confetti';
 
 export default function RegisterPage() {
   const [timeLeft, setTimeLeft] = useState({ days: '00', hours: '00', minutes: '00', seconds: '00' });
@@ -19,9 +20,69 @@ export default function RegisterPage() {
     // Intro timing is now driven by audio playback (onEnded event)
   }, []);
 
+  const triggerConfetti = () => {
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 45, spread: 360, ticks: 100, zIndex: 9999 };
+
+    const randomInRange = (min: number, max: number) => Math.random() * (max - min) + min;
+
+    const interval: any = setInterval(function() {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 70 * (timeLeft / duration);
+      
+      // Fire from bottom-left
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        angle: randomInRange(55, 125),
+        spread: randomInRange(50, 70),
+        startVelocity: randomInRange(35, 65),
+      });
+      // Fire from bottom-right
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        angle: randomInRange(55, 125),
+        spread: randomInRange(50, 70),
+        startVelocity: randomInRange(35, 65),
+      });
+    }, 250);
+
+    // Initial big blasts from exact bottom corners
+    confetti({
+      particleCount: 150,
+      angle: 60,
+      spread: 80,
+      origin: { x: 0, y: 1 },
+      startVelocity: 60,
+      zIndex: 9999,
+      colors: ['#FFC900', '#FF6A00', '#FFB800', '#F23C41']
+    });
+    confetti({
+      particleCount: 150,
+      angle: 120,
+      spread: 80,
+      origin: { x: 1, y: 1 },
+      startVelocity: 60,
+      zIndex: 9999,
+      colors: ['#FFC900', '#FF6A00', '#FFB800', '#F23C41']
+    });
+  };
+
   const endIntroTransition = () => {
     setIsFadingOut(true);
-    setTimeout(() => setShowIntro(false), 1000);
+    setTimeout(() => {
+      setShowIntro(false);
+      triggerConfetti();
+    }, 1000);
   };
 
   useEffect(() => {
@@ -429,7 +490,7 @@ export default function RegisterPage() {
             
             {/* When / Where */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-[#243B9E] text-white p-16 rounded-[14px] text-center h-[380px] flex flex-col justify-center shadow-md relative overflow-hidden">
+              <div className="bg-[#243B9E] text-white p-8 md:p-16 rounded-[14px] text-center min-h-[300px] md:h-[380px] flex flex-col justify-center shadow-md relative overflow-hidden">
                 <div className="absolute inset-0 bg-[#243B9E]/90 mix-blend-multiply"></div>
                 <div className="relative z-10">
                     <div className="mb-10">

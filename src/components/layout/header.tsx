@@ -36,7 +36,7 @@ export default function Header() {
           <div className="relative h-8 w-8 transition-transform duration-500 ease-in-out group-hover:rotate-12 group-hover:scale-110">
             <Image src="/logo-header.png" alt="Grafana & Friends Mumbai" fill className="object-contain" />
           </div>
-          <span className="relative">
+          <span className="relative text-base sm:text-lg whitespace-nowrap">
             Grafana & Friends Mumbai
             <span className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-white transition-transform duration-300 ease-out group-hover:scale-x-100" />
           </span>
@@ -61,8 +61,8 @@ export default function Header() {
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="md:hidden text-primary-foreground border-primary-foreground/50 transition-all duration-300 hover:bg-primary-foreground/20 hover:text-white hover:scale-110 hover:border-primary-foreground">
-                    <Menu className="h-6 w-6" />
+                <Button variant="outline" size="icon" className="md:hidden border-primary-foreground/50 transition-all duration-300 hover:bg-primary-foreground/20 hover:scale-110 hover:border-primary-foreground shrink-0 ml-2">
+                    <Menu className="h-6 w-6 text-blue-600" />
                     <span className="sr-only">Toggle navigation menu</span>
                 </Button>
                 </SheetTrigger>

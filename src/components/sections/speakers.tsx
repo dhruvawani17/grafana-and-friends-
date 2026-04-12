@@ -84,7 +84,7 @@ export default function SpeakersSection() {
                 </div>
 
                 <div className="mt-16 text-center">
-                     <Button size="lg" asChild variant="outline" className="text-lg px-8 py-6 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                     <Button size="lg" asChild variant="outline" className="text-base sm:text-lg px-4 sm:px-8 py-6 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                         <a href="https://grafana.qualtrics.com/jfe/form/SV_4OQ9dzUAbSHfrAG" target="_blank" rel="noopener noreferrer">
                             Become a Speaker (CFP Open!)
                         </a>

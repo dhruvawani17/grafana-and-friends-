@@ -64,7 +64,7 @@ export default function HeroSection() {
             
           {/* Stylized Logo text */}
           <div className="flex flex-col items-center select-none font-black tracking-tighter" style={{ fontFamily: '"Arial Black", Arial, sans-serif' }}>
-            <h1 className="text-7xl sm:text-8xl md:text-9xl mb-1 mt-6 drop-shadow-lg" 
+            <h1 className="text-[12vw] sm:text-7xl md:text-8xl lg:text-9xl mb-1 mt-6 drop-shadow-lg" 
                 style={{ 
                   color: '#FFE26E', 
                   backgroundImage: 'linear-gradient(to bottom, #FFC900, #FF6A00)',
@@ -76,8 +76,8 @@ export default function HeroSection() {
               GrafanaCon
             </h1>
             
-            <div className="flex items-center gap-2 sm:gap-4 md:gap-6 mt-1 md:mt-2">
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl" 
+            <div className="flex items-center gap-1 sm:gap-4 md:gap-6 mt-1 md:mt-2">
+              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl" 
                     style={{ 
                       color: '#FFB800', 
                       WebkitTextStroke: '3px #1A1A1A', 
@@ -86,7 +86,7 @@ export default function HeroSection() {
                     }}>
                 20
               </span>
-              <span className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl px-2 sm:px-4 leading-none" 
+              <span className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl px-1 sm:px-4 leading-none" 
                     style={{ 
                       color: '#FFFFFF', 
                       WebkitTextStroke: '3px #1A1A1A', 
@@ -94,7 +94,7 @@ export default function HeroSection() {
                     }}>
                 LOCAL
               </span>
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl" 
+              <span className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl" 
                     style={{ 
                       color: '#FFB800', 
                       WebkitTextStroke: '3px #1A1A1A', 
@@ -106,11 +106,11 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <p className="mt-8 mb-4 text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg">
+          <p className="mt-8 mb-4 text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white drop-shadow-lg">
             Register today!
           </p>
           
-          <p className="text-2xl md:text-4xl font-bold tracking-wide" style={{ color: '#FFB800', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+          <p className="text-xl md:text-4xl font-bold tracking-wide text-center" style={{ color: '#FFB800', textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             13th June 2026 • Mumbai
           </p>
           
