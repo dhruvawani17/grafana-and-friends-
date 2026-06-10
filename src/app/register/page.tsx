@@ -240,129 +240,83 @@ export default function RegisterPage() {
         <HeroSection />
 
         {/* What's happening section */}
-        <section className="bg-[#F4F5F5] py-24 px-4 border-b border-slate-200">
-          <div className="container mx-auto max-w-5xl text-center">
-            <h2 className="text-4xl md:text-[44px] font-bold text-black mb-6 tracking-tight">What’s happening at GrafanaCON 2026</h2>
-            <p className="text-[17px] text-slate-700 max-w-4xl mx-auto mb-20 leading-relaxed font-medium">
+        <section className="bg-white py-24 px-4 border-b-[8px] border-black relative overflow-hidden z-10" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.2) 2px, transparent 2px)', backgroundSize: '24px 24px' }}>
+          <div className="container mx-auto max-w-5xl text-center relative z-20">
+            <h2 className="text-4xl md:text-[50px] font-black text-black mb-6 tracking-tighter uppercase whitespace-normal inline-block bg-[#00d2ff] border-[4px] border-black px-6 py-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transform -rotate-1">What’s happening at GrafanaCon Local?</h2>
+            <p className="text-[19px] text-black bg-white border-[4px] border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-4xl mx-auto mb-20 leading-relaxed font-bold mt-8">
               Come together with hundreds of your open source friends for deep-dive sessions, hands-on labs, inspiring community stories, and a first look at what's next for Grafana and the open source LGTM stack.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 text-left relative">
-              <div className="flex flex-col relative z-10">
-                <div className="w-14 h-14 border border-[#FF6A00] rounded-lg flex items-center justify-center mb-6 bg-orange-50/50 shadow-sm">
-                  <Megaphone className="text-[#FF6A00] w-6 h-6" strokeWidth={1.5} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 text-left relative">
+              <div className="flex flex-col relative bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+                <div className="w-16 h-16 border-[4px] border-black flex items-center justify-center mb-6 bg-[#ff8cbc] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Megaphone className="text-black w-8 h-8" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-[22px] font-bold text-black mb-3">News</h3>
-                <p className="text-slate-600 font-medium leading-relaxed">Hear about the latest Grafana features and visualizations and other developments in the extended open source monitoring ecosystem.</p>
+                <h3 className="text-[26px] font-black text-black mb-3 uppercase tracking-wider border-b-[3px] border-black pb-2 inline-block max-w-fit">News</h3>
+                <p className="text-black font-bold text-[17px] leading-relaxed">Hear about the latest Grafana features and visualizations and other developments in the extended open source monitoring ecosystem.</p>
               </div>
-              <div className="flex flex-col">
-                <div className="w-14 h-14 border border-[#2E88F5] rounded-lg flex items-center justify-center mb-6 bg-blue-50/50 shadow-sm">
-                  <Users className="text-[#2E88F5] w-6 h-6" strokeWidth={1.5} />
+              <div className="flex flex-col relative bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+                <div className="w-16 h-16 border-[4px] border-black flex items-center justify-center mb-6 bg-[#4285F4] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <Users className="text-white w-8 h-8" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-[22px] font-bold text-black mb-3">Community</h3>
-                <p className="text-slate-600 font-medium leading-relaxed">Get inspired by community members who use Grafana in cool and surprising ways and learn how you can observe anything from anywhere.</p>
+                <h3 className="text-[26px] font-black text-black mb-3 uppercase tracking-wider border-b-[3px] border-black pb-2 inline-block max-w-fit">Community</h3>
+                <p className="text-black font-bold text-[17px] leading-relaxed">Get inspired by community members who use Grafana in cool and surprising ways and learn how you can observe anything from anywhere.</p>
               </div>
-              <div className="flex flex-col">
-                <div className="w-14 h-14 border border-[#A389F4] rounded-lg flex items-center justify-center mb-6 bg-purple-50/50 shadow-sm">
-                  <BookOpen className="text-[#A389F4] w-6 h-6" strokeWidth={1.5} />
+              <div className="flex flex-col relative bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+                <div className="w-16 h-16 border-[4px] border-black flex items-center justify-center mb-6 bg-[#fbbc05] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <BookOpen className="text-black w-8 h-8" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-[22px] font-bold text-black mb-3">Education</h3>
-                <p className="text-slate-600 font-medium leading-relaxed">Learn from 20+ talks, deep dives, and hands-on labs covering Grafana, Prometheus, OpenTelemetry, Loki, Mimir, Tempo, and more.</p>
+                <h3 className="text-[26px] font-black text-black mb-3 uppercase tracking-wider border-b-[3px] border-black pb-2 inline-block max-w-fit">Education</h3>
+                <p className="text-black font-bold text-[17px] leading-relaxed">Learn from 20+ talks, deep dives, and hands-on labs covering Grafana, Prometheus, OpenTelemetry, Loki, Mimir, Tempo, and more.</p>
               </div>
-              <div className="flex flex-col">
-                <div className="w-14 h-14 border border-[#32B87C] rounded-lg flex items-center justify-center mb-6 bg-green-50/50 shadow-sm">
-                  <MessageSquare className="text-[#32B87C] w-6 h-6" strokeWidth={1.5} />
+              <div className="flex flex-col relative bg-white border-[4px] border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all">
+                <div className="w-16 h-16 border-[4px] border-black flex items-center justify-center mb-6 bg-[#34a853] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <MessageSquare className="text-white w-8 h-8" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-[22px] font-bold text-black mb-3">Hallway Track</h3>
-                <p className="text-slate-600 font-medium leading-relaxed">Meet your Community Forum friends and LinkedIn connections in person. Share ideas, tips and tricks, and your favorite dashboards!</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Agenda Section */}
-        <section className="bg-[#F4F5F5] py-24 px-4">
-          <div className="container mx-auto max-w-[1000px]">
-            <h2 className="text-4xl md:text-[44px] font-bold text-black mb-16 text-center tracking-tight">Agenda at a glance</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-              {/* Left Column */}
-              <div className="flex flex-col gap-8">
-                {/* Monday, 20 April */}
-                <div className="flex flex-col rounded-[14px] overflow-hidden shadow-sm">
-                  <div className="bg-black text-white py-4 px-6 text-center font-bold text-[22px] tracking-wide relative">
-                    Monday, 20 April
-                  </div>
-                  <div className="bg-[#5C8AE6] p-8 min-h-[170px] flex px-10">
-                    <ul className="list-disc pl-4 text-black font-semibold text-[17px] leading-relaxed">
-                      <li>Hands-on labs (additional ticket required)</li>
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Wednesday, 22 April */}
-                <div className="flex flex-col rounded-[14px] overflow-hidden shadow-sm">
-                  <div className="bg-black text-white py-4 px-6 text-center font-bold text-[22px] tracking-wide relative">
-                    Wednesday, 22 April
-                  </div>
-                  <div className="bg-[#95D166] p-8 min-h-[220px] flex px-10">
-                    <ul className="list-disc pl-4 text-black font-semibold text-[17px] leading-relaxed space-y-2">
-                      <li>Technical sessions and cool community use cases</li>
-                      <li>Ask the Experts booth</li>
-                      <li>Live demos</li>
-                      <li>Networking opportunities</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column */}
-              <div className="flex flex-col rounded-[14px] overflow-hidden shadow-sm">
-                <div className="bg-black text-white py-4 px-6 text-center font-bold text-[22px] tracking-wide relative">
-                  Tuesday, 21 April
-                </div>
-                <div className="bg-[#FFE300] p-8 min-h-[422px] flex px-10 pt-10">
-                  <ul className="list-disc pl-4 text-black font-semibold text-[17px] leading-[1.8] space-y-1">
-                    <li>Opening keynote</li>
-                    <li>Technical sessions and cool community use cases</li>
-                    <li>Ask the Experts booth</li>
-                    <li>Live demos</li>
-                    <li>Networking opportunities</li>
-                    <li>Community party</li>
-                  </ul>
-                </div>
+                <h3 className="text-[26px] font-black text-black mb-3 uppercase tracking-wider border-b-[3px] border-black pb-2 inline-block max-w-fit">Hallway Track</h3>
+                <p className="text-black font-bold text-[17px] leading-relaxed">Meet your Community Forum friends and LinkedIn connections in person. Share ideas, tips and tricks, and your favorite dashboards!</p>
               </div>
             </div>
           </div>
         </section>
+
         {/* Registration Widget Section */}
-        <section id="register" className="w-full bg-[#1C3A6A] relative overflow-hidden pb-24 pt-20">
-          <div className="absolute inset-0 z-0 opacity-20 bg-[url('/some-pattern.svg')] mix-blend-overlay"></div>
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-[#2A5298] to-transparent rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2 z-0"></div>
-          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#0F2040] to-transparent rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/4 z-0"></div>
+        <section id="register" className="w-full bg-[#fbbc05] relative overflow-hidden pb-24 pt-20 border-t-[8px] border-black border-b-[8px]">
+          <div className="absolute inset-0 z-0" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.5) 2px, transparent 2px)', backgroundSize: '32px 32px' }}></div>
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] border-[4px] border-black rounded-full mix-blend-overlay -translate-y-1/2 translate-x-1/2 z-0 hidden md:block"></div>
+          <div className="absolute bottom-0 left-0 w-[300px] h-[300px] border-[4px] border-black mix-blend-overlay translate-y-1/2 -translate-x-1/4 z-0 hidden md:block"></div>
 
           <div className="relative z-10 container mx-auto px-4 flex flex-col items-center justify-center">
-            <h1 className="text-4xl md:text-[44px] font-bold text-white mb-10 text-center tracking-tight drop-shadow-md">
-              Register now to join us in Mumbai
-            </h1>
+            
+            {/* Bold Title */}
+            <div className="bg-white border-[4px] border-black p-4 md:p-6 mb-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] -rotate-1 hover:rotate-0 transition-transform">
+               <h1 className="text-4xl md:text-[50px] font-black text-black text-center tracking-tighter uppercase leading-none">
+                 Join us in Mumbai
+               </h1>
+            </div>
 
             {/* Countdown Timer */}
-            <div className="flex items-center gap-2 sm:gap-4 mb-12">
+            <div className="flex items-center gap-4 sm:gap-6 mb-16">
               {[ {value: timeLeft.days, label: 'days'}, 
                  {value: timeLeft.hours, label: 'hours'}, 
                  {value: timeLeft.minutes, label: 'minutes'}, 
                  {value: timeLeft.seconds, label: 'seconds'}
-              ].map((stat, i) => (
-                 <div key={i} className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-md rounded border border-white/20 w-[70px] h-[85px] sm:w-[85px] sm:h-[105px] shadow-sm">
-                   <span className="text-4xl sm:text-[46px] font-bold text-white mb-0 leading-tight drop-shadow">{stat.value}</span>
-                   <span className="text-[10px] sm:text-[11px] font-semibold text-white/80 lowercase tracking-wide mt-1">{stat.label}</span>
+              ].map((stat, i) => {
+                 const colors = ['bg-[#4285F4]', 'bg-[#ff8cbc]', 'bg-white', 'bg-[#00d2ff]'];
+                 const textColor = i === 2 ? 'text-black' : 'text-white';
+                 const labelColor = i === 2 ? 'text-black font-black' : 'text-white font-bold';
+                 
+                 return (
+                 <div key={i} className={`flex flex-col items-center justify-center ${colors[i]} border-[4px] border-black p-4 w-[80px] h-[95px] sm:w-[100px] sm:h-[120px] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-transform`}>
+                   <span className={`text-4xl sm:text-[52px] font-black ${textColor} mb-0 leading-none tracking-tighter`}>{stat.value}</span>
+                   <span className={`text-[11px] sm:text-[13px] ${labelColor} uppercase tracking-widest mt-2`}>{stat.label}</span>
                  </div>
-              ))}
+              )})}
             </div>
 
             <a href="https://www.meetup.com/grafana-and-friends-mumbai/events/313668351/" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-[#F23C41] hover:bg-[#D93035] text-white font-bold px-10 py-7 rounded-[8px] shadow-lg text-xl mb-8">
-                Register now on Meetup
+              <Button className="bg-[#ea4335] hover:bg-black hover:-translate-y-1 transition-all text-white font-black px-10 py-7 rounded-none border-[3px] border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-xl tracking-wider mb-8">
+                REGISTER NOW ON MEETUP
               </Button>
             </a>
 
@@ -485,22 +439,32 @@ export default function RegisterPage() {
 
 
         {/* Panels Section */}
-        <section className="bg-[#F4F5F5] py-24 px-4 overflow-hidden relative">
+        <section className="bg-white py-24 px-4 overflow-hidden relative">
           <div className="container mx-auto max-w-5xl space-y-24">
             
             {/* When / Where */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="bg-[#243B9E] text-white p-8 md:p-16 rounded-[14px] text-center min-h-[300px] md:h-[380px] flex flex-col justify-center shadow-md relative overflow-hidden">
-                <div className="absolute inset-0 bg-[#243B9E]/90 mix-blend-multiply"></div>
-                <div className="relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative">
+               <div className="absolute left-[-20px] top-[-20px] hidden md:block">
+                  <span className="text-[#34a853] text-[80px]">✦</span>
+               </div>
+              <div className="bg-[#4285F4] text-white p-8 md:p-12 border-[4px] border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] text-center min-h-[300px] md:h-[350px] flex flex-col justify-center relative hover:-translate-y-2 hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-transform">
+                <div className="absolute top-2 left-2 right-2 bottom-2 border-[2px] border-white/20 pointer-events-none"></div>
+                <div className="relative z-10 text-black">
                     <div className="mb-10">
-                    <h3 className="text-xl mb-1 font-medium opacity-90 tracking-wide">When</h3>
-                    <p className="text-[24px] font-bold">13th June 2026</p>
+                    <h3 className="text-xl mb-2 font-black uppercase tracking-widest text-[#fbbc05]">When</h3>
+                    <p className="text-[28px] md:text-[32px] font-black uppercase bg-black text-white inline-block px-4 py-2 border-[2px] border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">13th June 2026</p>
                     </div>
                     <div>
-                    <h3 className="text-xl mb-1 font-medium opacity-90 tracking-wide">Where</h3>
-                    <p className="text-[20px] font-bold leading-tight mt-1">TBD<br/>Mumbai</p>
-                    <p className="text-[16px] mt-3 opacity-90 font-medium leading-normal">Mumbai, India</p>
+                    <h3 className="text-xl mb-2 font-black uppercase tracking-widest text-[#fbbc05]">Where</h3>
+                    <p className="text-[20px] md:text-[24px] font-black leading-tight mt-1 uppercase mb-2">MSSU I-Spark Foundation Incubator Vidyavihar<br/>Mumbai</p>
+                    <a 
+                      href="https://maps.app.goo.gl/1UiY9gcVhtCimhNb9" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-[16px] mt-1 font-bold bg-white text-black inline-block px-3 py-1.5 border-2 border-black hover:bg-[#fbbc05] transition-colors shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                    >
+                      Click for Address 📍
+                    </a>
                     </div>
                 </div>
               </div>
@@ -647,14 +611,16 @@ export default function RegisterPage() {
         */}
 
         {/* Become a sponsor */}
-        <section className="bg-[#F4F5F5] pb-24 px-4">
+        <section className="bg-black pb-24 px-4 pt-16">
           <div className="container mx-auto max-w-[1000px]">
-            <div className="bg-[#F4EBFF] rounded-[20px] shadow-sm p-14 text-center">
-              <h2 className="text-[32px] font-bold text-black mb-4 tracking-tight">Become a GrafanaCON 2026 sponsor</h2>
-              <p className="text-[16px] text-black font-medium leading-[1.6]">
-                Limited sponsorship opportunities are available for GrafanaCON 2026. Email <br className="hidden md:block" />
-                <a href="mailto:grafanamubai@gmail.com" className="underline underline-offset-4 hover:text-slate-700 decoration-slate-400">grafanamubai@gmail.com</a> to get started.
+            <div className="bg-[#4285F4] border-[4px] border-white p-14 text-center shadow-[12px_12px_0px_0px_rgba(255,255,255,1)] hover:-translate-y-2 transition-transform">
+              <h2 className="text-[32px] md:text-[40px] font-black tracking-tighter text-white mb-6 uppercase">Become a Sponsor</h2>
+              <p className="text-[18px] md:text-[20px] text-white font-bold leading-relaxed max-w-2xl mx-auto mb-8">
+                Limited sponsorship opportunities are available for Grafana & Friends Mumbai 2026. 
               </p>
+              <a href="mailto:grafanamubai@gmail.com" className="bg-[#fbbc05] text-black font-black px-8 py-4 border-[3px] border-black text-xl hover:bg-white inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] uppercase tracking-wider">
+                 Email Us ✉️
+              </a>
             </div>
           </div>
         </section>
