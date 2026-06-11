@@ -6,12 +6,12 @@ import Link from 'next/link';
 const coreTeam = [
     { name: 'Nikita Shinde', title: 'Organiser', imageId: 'core-1', linkedin: 'https://www.linkedin.com/in/shinde-nikita/' },
     { name: 'Prajwal Deshpande', title: 'Co-organiser', imageId: 'core-2', linkedin: 'https://www.linkedin.com/in/d-prajwal/' },
+    { name: 'Mandar Sarfare', title: 'SRE @ IBM', imageId: 'core-6', linkedin: 'https://www.linkedin.com/in/mandar-sarfare/' },
     { name: 'Dhruva Wani', title: 'Web Developer', imageId: 'core-3', linkedin: 'https://www.linkedin.com/in/dhruvawani17/' },
     { name: 'Krisha Thakkar', title: 'Social Media Lead', imageId: 'core-4', linkedin: 'https://www.linkedin.com/in/krisha-thakkar-bb1687311/' },
     { name: 'Sandesh Deshpande', title: 'Solutions architect @ Team Computers', imageId: 'core-5', linkedin: 'https://www.linkedin.com/in/sandesh-deshpande-32700940/' },
-    { name: 'Mandar Sarfare', title: 'SRE @ IBM', imageId: 'core-6', linkedin: 'https://www.linkedin.com/in/mandar-sarfare/' },
     { name: 'Uddhav More', title: 'Cloud infra support @ wipro', imageId: 'core-7', linkedin: 'https://www.linkedin.com/in/uddhav-more/' },
-    { name: 'Inshirah ', title: 'Social Media Lead', imageId: 'core-8', linkedin: 'https://www.linkedin.com/in/vanshikajain622' },
+    { name: 'Inshirah ', title: 'Social Media Lead', imageId: '', linkedin: 'https://www.linkedin.com/in/vanshikajain622' },
 ];
 
 export default function CoreTeamSection() {
