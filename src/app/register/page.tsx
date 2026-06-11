@@ -156,24 +156,26 @@ export default function RegisterPage() {
         <div className="absolute inset-0 z-0 pointer-events-none" style={{ animation: 'flashPulse 10s ease-in-out forwards' }}></div>
         
         {/* Background audio track */}
-        <audio 
-          src="/title.mp3" 
-          loop={false} 
-          preload="auto" 
-          onEnded={endIntroTransition}
-          ref={(audioEl) => {
-            if (audioEl && !audioEl.dataset.played) {
-              audioEl.dataset.played = "true";
-              setTimeout(() => {
-                audioEl.play().catch(e => {
-                  console.log("Audio play blocked", e);
-                  // Optional fallback timing for strict browser autoplay blocking
-                  setTimeout(endIntroTransition, 8500);
-                });
-              }, 1500);
-            }
-          }}
-        />
+        {/*
+          <audio
+            src="/title.mp3"
+            loop={false}
+            preload="auto"
+            onEnded={endIntroTransition}
+            ref={(audioEl) => {
+              if (audioEl && !audioEl.dataset.played) {
+                audioEl.dataset.played = "true";
+                setTimeout(() => {
+                  audioEl.play().catch(e => {
+                    console.log("Audio play blocked", e);
+                    // Optional fallback timing for strict browser autoplay blocking
+                    setTimeout(endIntroTransition, 8500);
+                  });
+                }, 1500);
+              }
+            }}
+          />
+        */}
 
         <div className="cinematic-container w-full px-4 sm:px-8 flex flex-col items-center justify-center gap-y-8 relative z-10">
           {/* First Line: Spreads across the first 2 seconds */}
@@ -220,7 +222,7 @@ export default function RegisterPage() {
 
   return (
     <>
-      {renderIntro()}
+      {/* {renderIntro()} */}
       <div className="flex flex-col min-h-screen bg-[#F4F5F5]">
         <Header />
       
